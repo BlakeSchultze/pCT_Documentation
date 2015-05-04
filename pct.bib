@@ -1,0 +1,477 @@
+\Sort{
+  Mode{on}
+  Collation{mixed}
+  SortTypeOrder{pattern,key,name}
+  NameOrder{ascending}
+  Key{{author,editor},\year{year,note}}
+  KeyOrder{descending,nulls first}
+  Pattern{author+editor: "Schubert"}
+  PatternOrder{first}
+}
+%%% ABBREVIATIONS
+@string{TAC = "IEEE Trans. Aut. Control"}
+@string{IJC = "Int. J. Control"}
+@string{SICON = "SIAM J. Control Opt."}
+@string{SIAMJC = "SIAM J. Cont."}
+@string{SISSC = "SIAM J. Sci. Statist. Comput."}
+@string{SISC = "SIAM J. Sci. Comput."}
+@string{SIMAX = "SIAM J. Matrix Anal. Appl."}
+@string{SINUM = "SIAM J. Numer. Anal."}
+@string{SIREV = "SIAM Review"}
+@string{LAA = "Lin. Alg. Appl."}
+@string{MCSS = "Math. of Control, Signals, and Systems"}
+@string{MP = "Med. Phys."}
+@string{SCL = "Sys. Control Lett."}
+@string{IEEECAS = "IEEE Trans. Circ. Syst."}
+@string{IEEEIT = "IEEE Trans. Info. Theory"}
+@string{IEEENS = "IEEE Trans. Nucl. Sci."} %IEEE Transactions on Nuclear Science
+@string{ProcIEEE = "Proc. IEEE"}
+@string{ProcCDC = "Proc. IEEE Conf. Decis. Control"}
+@string{ProcACC = "Proc. Amer. Contr. Conf."}
+@string{TOMS = "ACM Trans. Math. Software"}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proton beam theory
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@ARTICLE{Tschalar68,
+  AUTHOR =       {C. Tschal\" ar},
+  TITLE =        {Straggling distributions of extremely large energy losses},
+  JOURNAL =      {Nucl. Instrum. Methods},
+  YEAR =         {1968},
+  volume =       {61},
+  pages =        {141\-156},
+}
+%[2] G. Hounsfield, "A method of an apparatus for examination of a body by radiation suchas x-ray or gamma radiation," Patent specifcation 1283915, The Patent Office, 1972.
+@ARTICLE{ICRU93,
+  AUTHOR =       {{International Commission on Radiation Units and Measurements}},
+  TITLE =        {Stopping Powers and Ranges for Protons and Alpha Particles},
+  JOURNAL =      {ICRU Report},
+  YEAR =         {1993},
+  volume =       {49},
+}
+@BOOK{LEO94,
+  AUTHOR =       {William R. Leo},
+  TITLE =        {Techniques for Nuclear and Particle Physics Experiments},
+  PUBLISHER =    {Springer},
+  edition  =     {2nd},
+  YEAR =         {1994},
+}
+%B. Schaffner and E. Pedroni, "The precision of proton range calculations in proton radiotherapy treatment planning:
+%experimental verification of the relation between CT-HU and proton stopping power," Physics in Medicine and Biology,
+%43, 1579–1592 (1998).
+@ARTICLE{SP98,
+  AUTHOR =       {B. Schaffner and E. Pedroni},
+  TITLE =        {The precision of proton range calculations in proton radiotherapy treatment planning: experimental verification of the relation between CT-HU and proton stopping power},
+  JOURNAL =      {Physics in Medicine and Biology},
+  YEAR =         {1998},
+  volume =       {43},
+  pages =        {1579–1592},
+}
+@inproceedings{CGHNSS12,
+  author    = {Y. Chen and E. Gomez and F. Hurley and Y. Nie and K.E. Schubert and R. Schulte},
+  title     = {Accurate Proton Beam Localization},
+  booktitle = {Proceedings of The 2012 International Conference on Bioinformatics and Computational Biology (BIOCOMP'12) },
+  year      = {2012},
+  pages     = {213-217},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scanner system, data acquisition, and calibration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%G. Coutrakon, J. Hubbard, J. Johanning, G. Maudsley, T. Slaton, and P. Morton, "A performance study of the Loma Linda proton medical accelerator," Med. Phys., 21, 1691–1701 (1994).
+@ARTICLE{CHJ94,
+  AUTHOR =       {G. Coutrakon and J. Hubbard and J. Johanning and G. Maudsley and T. Slaton and P. Morton},
+  TITLE =        {A performance study of the Loma Linda proton medical accelerator},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {1994},
+  volume =       {21},
+  pages =        {1691–1701}
+}
+@ARTICLE{Fel07,
+  author =       {M. Bruzziand and N. Blumenkrantz and J. Feldt and J. Heimann and
+                H.F.-W. Sadrozinski and A. Seiden and D.C. Williams and
+                V. Bashkirov and R. Schulte and D. Menichelli and
+                M. Scaringella and G.G.P. Cirrone and G. Cuttone and
+                N. Randazzo and V. Sipala and D. Lo Presti},
+  title =        {Prototype Tracking Studies for Proton {CT}},
+  journal =      {IEEE Trans. Nucl. Sci.},
+  year =         {2007},
+  volume =       {54},
+  pages =        {140-145},
+  month =        {Feb},
+}
+@ARTICLE{Cut07,
+  author =       {G. Cuttone and G.A.P. Cirrone and G. Candiano and F. Di Rosa and
+                    G. Russo and N. Randazzo and V. Sipala and S. Lo Nigro and
+                    D. Lo Presti and J. Feldt and J. Heimann and H.F.-W. Sadrozinski and
+                    A. Seiden and D.C. Williams and V. Bashkirov and R. Schulte and
+                    M. Bruzzi and D. Menichelli},
+  title =        {Monte Carlo Studies of a Proton Computed Tomography System},
+  journal =      {IEEE Trans. Nucl. Sci.},
+  year =         {2007},
+  volume =       {54},
+  pages =        {1487-1491},
+  month =        {Oct.},
+}
+@ARTICLE{MHB10,
+  AUTHOR =       {Missaghian J. and Hurley F. and Bashkirov V. and Colby B. and Rykalin V. and Kachigiun S. and Fusi D. and Schulte R. and Martinez Mckinney F. and Sadrozinski H. and Penfold S},
+  TITLE =        {Beam test results of a CsI calorimeter matrix element},
+  JOURNAL =      {JINST},
+  YEAR =         {2010},
+  volume =       {5},
+  pages =        {P06001}
+}
+@ARTICLE{HSBC12,
+  AUTHOR =       {R.F. Hurley and R.W. Schulte and V.A. Bashkirov and G. Coutrakon and H.F.-W. Sadrozinski and B. Patyal},
+  TITLE =        {The phase I proton CT scanner and test beam results at LLUMC},
+  JOURNAL =      {Trans. Am. Nucl. Soc.},
+  YEAR =         {2012},
+  volume =       {106},
+  pages =        {63--66},
+}
+@ARTICLE{HSB12,
+  AUTHOR =       {R.F. Hurley and R.W. Schulte and V.A. Bashkirov and A.J. Wroe and A. Ghebremedhin and H.F.-W. Sadrozinski and V. Rykalin and G. Coutrakon and P. Koss and B. Patyal},
+  TITLE =        {Water-equivalent path length calibration of a prototype proton CT scanner},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {2012},
+  volume =       {39},
+  pages =        {2438--2446},
+}
+@INPROCEEDINGS{SBJSS12,
+  AUTHOR =       {R.W. Schulte and V. Bashkirov and R. Johnson and H. F.-W. Sadrozinski and K.E. Schubert},
+  TITLE =        {Overview of the LLUMC/UCSC/CSUSB phase 2 proton CT project},
+  BOOKTITLE =    {Trans. Am. Nucl. Soc.},
+  YEAR =         {2012},
+  volume =       {106},
+  pages =        {59-62},
+}
+%H. F.-W. Sadrozinski, R. P. Johnson, S. Macafee, A. Plumb, D. Steinberg, A. Zatserklyaniy, V. Bashkirov, F. Hurley and R. Schulte, Development of a Head Scanner for Proton CT. Nucl.Instrum.Meth. A 699, 205-210, 2013.
+@ARTICLE{SJM13,
+  AUTHOR =       {H. F.-W. Sadrozinski and R. P. Johnson and S. Macafee and A. Plumb and D. Steinberg and A. Zatserklyaniy and V. Bashkirov and F. Hurley and R. Schulte},
+  TITLE =        {Development of a Head Scanner for Proton CT},
+  JOURNAL =      {Nucl.Instrum.Meth. A},
+  YEAR =         {2013},
+  volume =       {699},
+  pages =        {205-210}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preprocessing: Hull-Detection, MLP, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@ARTICLE{SPTS08,
+  AUTHOR =       {R. Schulte and S. Penfold and J. Tafas and K.E. Schubert},
+  TITLE =        {A maximum likelihood proton path formalism for application in proton computed tomography},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {2008},
+  volume =       {35},
+  pages =        {4849-4856},
+  month =        {November},
+}
+@INPROCEEDINGS{BSCEWSPRMS08,
+  AUTHOR =       {V. Bashkirov and R. Schulte and G. Coutrakon and B. Erdelyi and K. Wong and H. Sadrozinski and S. Penfold
+  and Anatoly Rosenfeld and Scott McAllister and Keith Schubert},
+  TITLE =        {{Development of Proton Computed Tomography for Applications in Proton Therapy}},
+  BOOKTITLE =    {APPLICATION OF ACCELERATORS IN RESEARCH AND INDUSTRY: Twentieth International Conference},
+  YEAR =         {2008},
+  editor =       {Floyd D. McDaniel and Barney L. Doyle},
+  organization = {American Institute of Physics},
+  address =      {Fort Worth (Texas)},
+  note =         {ISBN: 978-0-7354-0633-9},
+  volume =       {AIP Conference Proceedings Volume 1099},
+  pages =        {460-463},
+  month =        {August 10-15},
+}
+@ARTICLE{PSSR09,
+  AUTHOR =       {S.N. Penfold and A.B. Rosenfeld and R.W. Schulte and K.E. Schubert},
+  TITLE =        {A more accurate reconstruction system matrix for quantitative proton computed tomography},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {2009},
+  volume =       {36},
+  number =       {10},
+  pages =        {4511-4518},
+  month =        {October},
+}
+@INPROCEEDINGS{MSSP09,
+  AUTHOR =       {S.A. McAllister and K.E. Schubert and R. Schulte and S. Penfold},
+  TITLE =        {General Purpose Graphics Processing Unit Speedup of Integral Relative Electron Density Calculation for Proton Computed Tomography},
+  BOOKTITLE =    {Proceedings of the IEEE High Performance Medical Imaging Workshop 2009},
+  YEAR =         {2009},
+}
+@inproceedings{SWSS12,
+  author    = {B. Schultze and M. Witt and K.E. Schubert and R. Schulte},
+  title     = {Space Carving and Filtered Back Projection as Preconditioners for Proton Computed Tomography Reconstruction},
+  booktitle = {Proceedings of the IEEE Nuclear Science Symposium Medical Imaging Conference},
+  year      = {2012},
+  pages     = {4335-4340},
+}
+
+@inproceedings{WSS12,
+  author    = {M. Witt and B. Schultze and R. Schulte and K.E. Schubert and E. Gomez},
+  title     = {A Proton Simulator for Testing Implementations of Proton {CT} Reconstruction Algorithms on {GPGPU} Clusters},
+  booktitle = {Proceedings of the IEEE Nuclear Science Symposium Medical Imaging Conference},
+  year      = {2012},
+  pages     = {4329-4334},
+}
+@INPROCEEDINGS{SWCSS15,
+  AUTHOR =       {B. Schultze and M. Witt and Y. Censor and K.E. Schubert and R. Schulte},
+  TITLE =        {Performance of Hull-Detection Algorithms for Proton Computed Tomography Reconstruction},
+  BOOKTITLE =    {Infinite Products of Operators and Their Applications},
+  SERIES = {Contemporary Mathematics},
+  YEAR =         {2015},
+  editor =       {S. Reich and A.J. Zaslavski},
+  volume =       {636},
+  pages =        {211-224},
+  publisher =    {American Mathematical Society}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Space/Silhouetter Carving
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@INPROCEEDINGS{KS99,
+  AUTHOR =       {K. N. Kutulakos and S. M. Seitz},
+  TITLE =        {A Theory of Shape by Space Carving},
+  BOOKTITLE =    {Proc. Seventh International Conference on Computer Vision (ICCV)},
+  YEAR =         {1999},
+  pages =        {307-314},
+}
+@ARTICLE{KS00,
+  AUTHOR =       {K. N. Kutulakos and S. M. Seitz},
+  TITLE =        {A Theory of Shape by Space Carving},
+  JOURNAL =      {International Journal of Computer Vision},
+  YEAR =         {2000},
+  volume =       {38},
+  number =       {3},
+  pages =        {199-218},
+  month =        {Marr Prize Special Issue},
+}
+@INPROCEEDINGS{VBSK00,
+  AUTHOR =       {S. Vedula, S. Baker, S. Seitz, and T. Kanade},
+  TITLE =        {Shape and Motion Carving in 6D},
+  BOOKTITLE =    {Proc. Computer Vision and Pattern Recognition Conf. (CVPR)},
+  YEAR =         {2000},
+}
+%Region-of-Construction Algorithm
+%A Vision System for Fast 3D Model Reconstruction
+%Huei-Yung Lin and Murali Subbarao
+%Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2001. CVPR 2001.
+%II-663 - II-668 vol.2
+%
+
+%uses silhouette carving
+%Silhouette Carving
+%Bj¨orn Karlsson William Nilsson† Johan Wetter‡
+
+%uses silhouette carving
+%Lyness, C., Marte, O., Wong, B., Marais, P. 2001. Low-Cost Model Reconstruction
+%from Image Sequences. AFRIGRAPH 2001, 131-135.
+
+%introduced idea of silhouette carving
+
+@INPROCEEDINGS{Niem94,
+  author =       {W. Niem},
+  title =        {Robust and fast modelling of 3{D} natural objects from multiple views},
+  booktitle =    {SPIE Proceedings Image and Video Processing},
+  year =         {1994},
+  volume =       {2182},
+  number =       {II},
+  pages =        {388–397},
+}
+@INPROCEEDINGS{Niem97,
+  author =       {W. Niem},
+  title =        {Error analysis for silhouette-based 3{D} shape estimation from multiple views},
+  booktitle =    {Proc. Int. Workshop on Synthetic-Natural Hybrid Coding and Three-Dimensional Imaging},
+  year =         {1997},
+  pages =        {143-146},
+}
+%IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE, VOL. PAMI-8, NO. 6, NOVEMBER 1986
+@ARTICLE{JC86,
+  AUTHOR =       {J. Canny},
+  TITLE =        {A Computational Approach to Edge Detection},
+  JOURNAL =      {IEEE Trans. Pattern Anal. Mach. Intell.},
+  YEAR =         {1986},
+  volume =       {8},
+  number =       {6},
+  pages =        {679-698},
+  month =        {November},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Image Reconstruction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@ARTICLE{SL74,
+  AUTHOR =       {L. Shepp and B. Logan},
+  TITLE =        {The {F}ourier reconstruction of a head section},
+  JOURNAL =      {IEEE Trans. Nucl. Sci.},
+  YEAR =         {1974},
+  volume =       {NS-21},
+  pages =        {21-43},
+}
+%L. Shepp and B. Logan, "The Fourier reconstruction of a head section," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 21-43, 1974.
+%http://www.cirsinc.com/products/all/36/pediatric-anthropomorphic-training-phantoms/?details=specs
+%2006-03-23
+@BOOK{KS88,
+  AUTHOR =       {A.C. Kak and M. Slaney},
+  TITLE =        {Principles of Computerized Tomographic Imaging},
+  PUBLISHER =    {IEEE Press},
+  YEAR =         {1988},
+  address =      {New York},
+}
+@INPROCEEDINGS{PSCBMSR10,
+  AUTHOR =       {S. N. Penfold and R. W. Schulte and Y. Censor and V. Bashkirov and S. Macallister and K. E. Schubert and A. B. Rosenfeld},
+  TITLE =        {Block-Iterative and String-Averaging Projection Algorithms in Proton Computed Tomography Image Reconstruction},
+  BOOKTITLE =    {Biomedical Mathematics: Promising Directions in Imaging, Therapy Planning and Inverse Problems},
+  YEAR =         {2010},
+  editor =       {Y. Censor and M. Jiang and G. Wang},
+  address =      {Madison, WI, USA},
+  organization = {The Huangguoshu International Interdisciplinary Conference},
+  publisher =    {Medical Physics Publishing},
+}
+@PHDTHESIS{PenfoldDis,
+  AUTHOR =       {S.N. Penfold},
+  TITLE =        {{Image Reconstruction and Monte Carlo Simulations in the Development of Proton Computed Tomography for Applications in Proton Radiation Therapy}},
+  SCHOOL =       {University of Wollongong},
+  YEAR =         {2010},
+  address =      {Australia},
+}
+
+@ARTICLE{PSCR10,
+  AUTHOR =       {S.N. Penfold and R.W. Schulte and Y. Censor and A.B. Rosenfeld},
+  TITLE =        {Total Variation Superiorization Schemes in Proton Computed Tomography Image Reconstruction},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {2010},
+  volume =       {37},
+  pages =        {5887-5895},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Filtered Back Projection
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{radon17,
+ author={J. Radon},
+ title={Uber due bestimmung von funktionen durch ihre intergralwerte langsgewisser mannigfaltigkeiten
+        (on the determination of functions from their integrals along certain manifolds)},
+ journal={Berichte Saechsische Akademie der Wissenschaften},
+ year ={1917},
+ volume={29},
+ pages={262 - 277},
+}
+
+%[4] H.H. Barrett and W. Swindell, Radialogical Imaging: The Theory of Image Formation,Detection and Processing. New York: Academic Press, 1981.
+
+% The filtered back-projection algorithm was invented by Bracewell and Riddle
+@ARTICLE{BR67,
+  AUTHOR =       {R.H. Bracewell and A.C. Riddle},
+  TITLE =        {Inversion of fan beam scawns in radio astronomy},
+  JOURNAL =      {Astrophysics Journal},
+  YEAR =         {1967},
+  volume =       {150},
+  pages =        {427-434},
+}
+
+% fbp was later developed independently with additional insights by Ramanchandran and Lakshminarayanan
+@ARTICLE{RL71,
+  AUTHOR =       {G.N. Ramanchandran and A.V. Lakshminarayanan},
+  TITLE =        {Three dimensional reconstructions from radiographs and electron micrographs: Application of convolution instead of {F}ourier transforms},
+  JOURNAL =      {Proc. Natl. Acad. Sci. USA},
+  YEAR =         {1971},
+  volume =       {68},
+  pages =        {2236-2240},
+}
+@TECHREPORT{Lak75,
+  AUTHOR =       {A.V. Lakshminarayanan},
+  TITLE =        {Reconstruction from divergent ray data},
+  INSTITUTION =  {Dept.Computer Science, State University of New York at Buffalo},
+  YEAR =         {1975},
+}
+
+% 3d algorithm fdk
+@ARTICLE{fdk,
+  AUTHOR =       {L.A. Feldkamp and L.C. Davis and J.W. Kress},
+  TITLE =        {Practical cone-beam algorithms},
+  JOURNAL =      {J. Opt. Soc. Am.},
+  YEAR =         {1984},
+  volume =       {A1},
+  pages =        {612-619},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% pCT ref  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@ARTICLE{Smith09,
+  AUTHOR =       {A.R. Smith},
+  TITLE =        {Vision 20/20: proton therapy},
+  JOURNAL =      {Med. Phys.},
+  YEAR =         {2009},
+  volume =       {36},
+  pages =        {556-568},
+}
+%%%% Cancer Information: Facts, Treatments, etc
+%American Cancer Society. Cancer Facts & Figures 2013. Atlanta: American Cancer Society; 2013.
+@TECHREPORT{ACS13,
+  AUTHOR =       {American Cancer Society},
+  TITLE =        {Cancer Facts and Figures 2013},
+  INSTITUTION =  {American Cancer Society Atlanta},
+  YEAR =         {2013},
+}
+%American Society for Therapeutic Radiology (ASTRO), Fast Facts About Radiation Oncology; https://www.astro.org/News-and-Media/Media-Resources/FAQs/Fast-Facts-About-Radiation-Therapy/Index.aspx
+@MISC{website:ASTRO,
+      AUTHOR = {American Society for Therapeutic Radiology (ASTRO)},
+      TITLE = {Fast Facts About Radiation Oncology},
+      MONTH = {November},
+      YEAR = {2012},
+      HOWPUBLISHED = {\!\!\!\!\!\url{https://www.astro.org/News-and-Media/Media-Resources/FAQs/Fast-Facts-About-Radiation-Therapy/Index.aspx}},
+}
+% U. Linz (Ed.) Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications. Heidelberg: Springer, 2012 Volume 320 2012].
+@BOOK{IBT12,
+    author    = {Ute Linz},
+    title     = {Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications},
+    publisher = {Springer},
+    volume   = {320},
+    series   = {Biological and Medical Physics, Biomedical Engineering},
+    year      = {2012}
+}
+%[8] R. Gordon, R. Bender, and G. Herman, "Algebraic reconstruction techniques(ART) forthree dimensional electron microscopy and X-ray photography," Journal of Theoritical Biology, vol. 36, pp. 105-117, 1970.
+
+%[9] R. Gordon, "A tutorial on ART(Algebraic Reconstruction Techniques)," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 78-93, 1974.
+
+%[10] G. Herman and A. Naparstek, "Fast image reconstruction based on a Radon inversionformula approppriate for rapidly collected data," SIAM Journal of Applied Mathematics, vol. 33, pp. 511-533, 1976.
+
+%[11] G. Herman and A. Lent, "Iterative reconstruction algorithms," Cornput. Biol. Med.,vol. 6, pp. 273-294, 1976.
+
+%[12] T. Budinger and G. Gullberg, "Three-dimensional reconstruction in nuclear medicineemission imaging," IEEE Transactions on Nuclear Science, vol. NS-21, pp. 2-21, 1974.
+
+%[13] S. Wernecke and L.D. Addario, "Maximum entropy image reconstruction," IEEETransactions on Computing, vol. C-26, pp. 351-364, 1977.
+
+%[14] L. Shepp and B. Logan, "The Fourier reconstruction of a head section," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 21-43, 1974.
+
+%[15] E. Tanaka and T.A. Iinuma, "Correction functions for optimizing the reconstructedimage in transverse section scan," Phys. Med. Biol., vol. 20, pp. 789-798, 1975.
+
+%[16] S. Kenue and J. Greenleaf, "Efficient convolution kernels for computerized tomogra-phy," Ultrasonic Imaging, vol. 1, pp. 232-244, 1979.
+
+%[17] L.Wang, "Cross section reconstruction with fan beam scanning geometry," IEEETransactions on Computing, vol. C-26, pp. 264-268, 1977.
+
+%[18] P. Dreike and D. Boyd, "Convolution reconstructions of fan-beam reconstructions,"Computer Graphics and Image Processing, vol. 5, pp. 459-469, 1977.
+
+%[19] T. Peters and R.M. Lewitt, "Computed tomography with fan-beam geometry," Journalof Computer Assisted Tomography, vol. 1, pp. 429-436, 1977.
+
+%[20] C. Thompson and T. Peters, "A fractional address accumulator for fast backprojec-tion,'' IEEE Transactions on Nuclear Science, vol. NS-28, no. 4, pp. 3648-3650, 1981.
+
+%[21] R. Hartz, D. Bristow, and N. Mullani, "A real time TOFPET slice backproject en-gine using dual Am 29116 microprocessors," IEEE Transactions on Nuclear Science, vol. NS-32, pp. 839-842, February 1985.
+
+%[22] Iskender Agi, P.J. Hurst, and K.W. Current, "An image processing IC for backpro-jection and spatial histogramming in a pipelined array," IEEE Journal of Solid State Circuits, vol. 28, no. 3, pp. 210 - 220, 1993.
+
+%[23] C.M. Chen, S.Y. Lee, and Z.H. Cho, "A parallel implementation of 3D CT imagereconstruction on hypercube multiprocessor," IEEE Transactions on Nuclear Science, vol. 37, no. 3, pp. 1333 - 1346, 1990.
+
+%[24] Z. Cho, C. Chen, and S.-Y. Lee, "Incremental algorithms: fast back projection schemesfor parallel beam geometries," IEEE Transactions on Medical Imaging, 1991.
+
+%[25] S. Barresi, D. Bollini, and A.D. Guerr~, "Use of a tr~nsputer system for fast 3D imagereconstruction in 3D PET," IEEE Transactions on Nuclear Science, vol. 37, no. 2, pp. 812-816, 1990.
+
+%[26] W. Jones, L. Byars, and M. Casey, "Positron emission tomographic images and ex-pectation maximization:A VLSI architecture for multiple iterations per second," IEEE Transaction on Nuclear Science, vol. 35, no. 1, pp. 620-624, 1988.
+
+%[27] J. Llacer and J. Meng, "Matrix based image reconstruction methods for tomography,"IEEE Transactions on Nuclear Science, vol. NS-32, no. 1, pp. 855-864, 1985.
+
+%[28] M. Stella Atkins, Donald Murray, and R. Harrop, "Use of transputers in a 3D PositronEmission Tomograph," IEEE Transactions on Medical Imaging, vol. 10, no. 3, pp. 276 - 283, 1991.
+
+%[29] A real time parallel processing data acquisition system, December 1988.
+
+%[30] A.V. Oppenhiem and R.W. Schafer, Discrete-time signalprocessing. Englewood Cliffs,New Jersey: Prentice-Hall, 1989.
+
+%[31] Thinking Machines Corporation, Cambridge, Massachusetts, Connection Machine For-tran Reference Manual, 1993.
+
+%[32] P.N. Swarztrauber, "Multiprocessor FFT's," Parallel Computing, vol. 5, pp. 197-210,1987.
+
+%[33] Thinking Machines Corporation, Cambridge, Massachusetts, Connection Machine Sci-entific Subroutine Library, 1993.
