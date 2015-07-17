@@ -1,0 +1,68 @@
+CDH Run
+Fri 10 pm - 12 am, May 15, 2015 and Sat 6 am - 2 pm, May 16, 2015
+Robert, Matthew, Reinhard, Mark P, George C, Victor R, Fritz D
+We set up the system during the afternoon hours. All systems work well without beam.
+
+Fri evening run
+10:24 pm: first attempt of low-intensity beam, wobble 10 cm x 10 cm, all intensity reducing  divergence & momentum slits to almost closed, quad detunded(30), beam current 0.1 nA (lowest possible)
+10:42 pm: no beam above noise detected -> opened slits slightly, still no beam, found that one beam stop was not closed, was removed
+10:44 pm: now beam occured at a bout 30 Hz
+10:49 pm: increased slits to allow 10 cm x 10 cm wobbling, rate increased to 9 kHz
+10:50 pm: brought quads to clinical mode, rate increased to 110 kHz
+11:05pm: analyzed first longer run at this rate, beam profile is flat, slightly off center
+11:07: further increased momentum slit, intensity increased by factor 2, further increased momentum slit to 5, then 10, then 20 mm -> reached 1.05 MHz rate, which is our upper limit,
+11:14: momentum slit 19 mm -> rate of 1 MHz, our goal, divergence slits were at 1.5 and 1.7, respectively
+11:34: first calib0 run 
+11:42  raised table by a few mm to center beam in v direction, widened beam profile, long wobble 3.3 A, height wobble 1.5 A, repeated calib0run
+
+Sat May 16, 12 am: did calib 0, 1, beam intensity dropped to 5kHz, could not figure out why at first, but then discovered that energy channels 1 and 4 had been switched. We ended for the night
+
+6:00 am: We reconvened at the proton center: Robert, Reinhard, Matthew, Tia, Mark P
+
+
+6:05 am: We powered up the system. First exposure showed that intensity was a bit too high. Reduced momentum slit setting to 17, then 14, latter was perfect
+
+6:21: finished calibration 0, but found that we had not turned the wobbler on, brought momentum slit back to 19
+
+6:43: Mark discovered that he had the wobbler amplitudes reversed
+
+6:54: finished Calib 1-4 and 0 (in that order), removed calib phantom
+
+7:10: finished rod phantom, 30 projections, checked profile at 0 deg and 96 deg, was centered at 0 mm
+
+7:20: finished water phantom 1 projection, momentum slit 19, field size (1 A, 2 A)
+
+7:36: mounted edge phantom, played with field size, adjusted field size (1.5 A, 3 A), adjusted momentum slit to 24
+
+7:40: started full edge phantom scan, 4 deg increments
+
+8:00: finished edge phantom
+
+8:05: started water phantom full scan, reduced momentum slit to 19, decreased  field size as well (1 A, 2 A)
+
+8:20: finished water phantom full scan
+
+8:25: started superior head phantom scan, used thin studs to lower the phantom, changed field size (1.5 A, 3 A), momentum slit 24
+
+9:20: finished inferior head phantom scan, used thick studs to raise the phantom, same field size as above, momentum slit 19
+
+9:30: started sensitome phantom scan, changed field size (0.6, 2 A)
+
+9:56: started line-pair phantom scan, changed field size (1 A, 2 A)
+
+10:30: started the low-density phantom scan, same settings as last phantom
+
+11:08: started the superior CIRSHP_1 (NIU dosimetry insert) scan, same settings as CIRSP_0
+
+12:39 finished radiographs of CIRS head phantom_0 (sup and inf)
+
+1:00 Robert downloaded new script from Ford for continous rotation and data accquistion. This was implemented and we programmed it to run for 6 min, (360 s), thus accumulating ~360 M histories
+
+1:15 started continuous scan of sensitom phantom
+
+1:30 stated continuous scan of edge phantom
+
+1:45 finished experiment and packed up equipment*. 
+
+*It was decided to leave the sensitom phantom at the proton center to allow them to determine RSP of the inserts with their equipment.
+
