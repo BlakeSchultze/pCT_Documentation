@@ -1,10 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.12)  3 MAR 2015 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  16 JUL 2015 15:33
 entering extended mode
 **pCT_Data_Organization_Format.tex
-
-("C:\Users\Blake\Dropbox\Blake -Reinhard - 2015\pCT file naming\pCT_Data_Organi
-zation_Format.tex"
-LaTeX2e <2014/05/01>
+(pCT_Data_Organization_Format.tex
+LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -90,8 +88,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \c@myEnumeratexii=\count102
 \enitdp@myEnumerate=\count103
 
-("C:\Users\Blake\Dropbox\Blake -Reinhard - 2015\pCT file naming\pCT_Data_Organi
-zation_Format.aux")
+(pCT_Data_Organization_Format.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
@@ -112,13 +109,13 @@ LaTeX Font Info:    ... okay on input line 28.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(18.06749pt, 523.95752pt, 72.26999pt)
-* v-part:(T,H,B)=(36.135pt, 686.565pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=523.95752pt
-* \textheight=686.565pt
+* modes: landscape 
+* h-part:(L,W,R)=(18.06749pt, 704.6325pt, 72.26999pt)
+* v-part:(T,H,B)=(36.135pt, 505.89001pt, 72.26999pt)
+* \paperwidth=794.96999pt
+* \paperheight=614.295pt
+* \textwidth=704.6325pt
+* \textheight=505.89001pt
 * \oddsidemargin=-54.2025pt
 * \evensidemargin=-54.2025pt
 * \topmargin=-73.135pt
@@ -126,7 +123,7 @@ LaTeX Font Info:    ... okay on input line 28.
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
+* \marginparwidth=144.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -149,32 +146,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 44.
+(Font)              <7> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 44.
+(Font)              <5> on input line 40.
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-("C:\Users\Blake\Dropbox\Blake -Reinhard - 2015\pCT file naming\pCT_Data_Organi
-zation_Format.aux") ) 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
+(pCT_Data_Organization_Format.aux) ) 
 Here is how much of TeX's memory you used:
- 1348 strings out of 493705
- 20091 string characters out of 3144569
- 89530 words of memory out of 3000000
- 4712 multiletter control sequences out of 15000+200000
+ 1347 strings out of 493678
+ 19669 string characters out of 3144251
+ 89792 words of memory out of 3000000
+ 4736 multiletter control sequences out of 15000+200000
  8001 words of font info for 28 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 23i,6n,21p,482b,1379s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on pCT_Data_Organization_Format.pdf (3 pages, 102538 bytes).
+ 23i,8n,21p,569b,1379s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti10.pfb>
+Output written on pCT_Data_Organization_Format.pdf (5 pages, 144209 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
