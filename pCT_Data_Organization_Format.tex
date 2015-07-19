@@ -29,6 +29,10 @@
 \maketitle
 \flushleft\ul{\textbf{Bold and Underlined}} : Folder names
 \flushleft\textbf{\textit{Bold and Italic}} : File names
+\vspace{0.5cm}
+\rule{\textwidth}{1pt}
+%\vspace{0.8cm}
+{\\\textbf{{.../pCT\_data/organized\_data/ :} folder containing all of the pCT data/images (raw, processed, projection, and reconstruction), primarily as soft links to the actual data itself which is stored/organized in separate directories by data type.}}
 \begin{myEnumerate}[labelindent=0pt, leftmargin=*]
     \item \ul{\textbf{Object Name}} : folder containing all of the experimental/simulated data and reconstructed images associated with the object with this name.
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
@@ -75,7 +79,7 @@
                                     \item \textbf{\textit{poly\_2\_3.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$
                                     \item \textbf{\textit{poly\_3\_4.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$
                                     \item \textbf{\textit{poly\_2\_6.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$
-                                    \item \textbf{\textit{poly\_3\_12.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$                                 
+                                    \item \textbf{\textit{poly\_3\_12.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$
                                     \item \textbf{\textit{MLP.bin}} : binary file with MLP path data for each history entering hull.
                                     \item \textbf{\textit{WEPL.bin}} : binary file specifying WEPL value for each history entering hull.
                                     \item \textbf{\textit{histories.bin}} : binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
@@ -183,26 +187,28 @@
 \end{myEnumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{0.5cm}
+\rule{\textwidth}{1pt}
+{\\\vspace{0.5cm}\textbf{{.../pCT\_data/raw\_data/ :} folder containing the raw experimental data organized by scan date}}
 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-    \item \ul{\textbf{raw\_data}} : folder containing the raw experimental data organized by scan date
+    \item \ul{\textbf{YY-MM-DD}} : Folder containing all raw experimental data acquired from the scan beginning on \ul{\textbf{YY-MM-DD}}
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-        \item \ul{\textbf{YY-MM-DD}} : Folder containing all raw experimental data acquired from the scan beginning on \ul{\textbf{YY-MM-DD}}
-        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-            \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}} : raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
-        \end{myEnumerate}
+        \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}} : raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
     \end{myEnumerate}
-    \item \ul{\textbf{processed\_data}} : folder containing the processed experimental data organized by scan and processed dates
+\end{myEnumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rule{\textwidth}{1pt}
+{\\\vspace{0.5cm}\textbf{{.../pCT\_data/processed\_data/ :} folder containing the processed experimental data organized by scan and processed dates}}
+\begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+    \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data corresponding to the raw experimental data acquired on \ul{\textbf{YY-MM-DD}}
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-        \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data corresponding to the raw experimental data acquired on \ul{\textbf{YY-MM-DD}}
+        \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data generated on \ul{\textbf{YY-MM-DD}} from the raw data
         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-            \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data generated on \ul{\textbf{YY-MM-DD}} from the raw data
-            \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}} : processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
-            \end{myEnumerate}
+            \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}} : processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
         \end{myEnumerate}
     \end{myEnumerate}
 \end{myEnumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document} 
+\end{document}
