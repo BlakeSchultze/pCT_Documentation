@@ -1,8 +1,9 @@
-\documentclass[landscape]{article}
+\documentclass[landscape,12pt]{article}
 %\usepackage{mymacros}
-\usepackage{enumitem}
-\usepackage{soul}
-\usepackage[top=0.5in, bottom=1.0in, left=0.25in, right=1in]{geometry}
+%\usepackage{enumitem}
+%\usepackage{soul}
+%\usepackage[top=0.5in, bottom=1.0in, left=0.25in, right=1in]{geometry}
+\usepackage{mymacros}
 \setlistdepth{12}
 
 \newlist{myEnumerate}{enumerate}{12}
@@ -19,78 +20,123 @@
 \setlist[myEnumerate,11]{label=\textbf{(\alph*)},labelindent=1pt, leftmargin=*}
 \setlist[myEnumerate,12]{label=\textbf{(\roman*)},labelindent=1pt, leftmargin=*}
 
-\title{\vspace{-4ex}pCT Data Storage Format for Baylor Server: Folder/File Naming and Organizational Scheme}
-\date{\vspace{-5ex}}
+
+%\title{\vspace{-4ex}Formatting pCT Data for Storage on the Baylor Server: Folder/File Naming and Organizational Scheme}
+%\title{\vspace{-4ex}Storing pCT Data on the Baylor Server: Folder/File Naming and Organizational Scheme}
+%\title{\vspace{-4ex}pCT Data Storage Format for Baylor Server: Folder/File Naming and Organizational Scheme}
+%\date{\vspace{-5ex}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\maketitle
-\flushleft\ul{\textbf{Bold and Underlined}} : Folder names
-\flushleft\textbf{\textit{Bold and Italic}} : File names
-\vspace{0.5cm}
-\rule{\textwidth}{1pt}
+\pagestyle{fancy}
+{\chead{\flushleft\vspace{-0.3cm}\includegraphics[width=0.12\textwidth]{Baylor_IM_horz.png}}}
+
+%\cfoot{\flushleft\vspace{-0.5cm}\includegraphics[width=0.15\textwidth]{Baylor_IM_horz.png}}
+\shadowoffset{0.5pt}
+\begin{boxtitle}
+    {Storing pCT Data on the Baylor Server}
+    {}
+    {Folder/File Naming and Organizational Scheme}
+\end{boxtitle}
+%\maketitle
+%\noindent\rule{\textwidth}{1pt}
+%\flushleft{\textbf{Bold and Underlined}} : Folder names (1) whose names are constant in \color{DarkGreen}{green}\color{Black} and (2) whose names vary depending on object name or date in \color{Brown}{brown}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3mm}\centering{\LARGE\shadowrgb{1.0,0.7373,0.0980}\color{BaylorGreenrgb}\shadowtext{Description of User/Shared Directories on Kodiak/Tardis Cluster Nodes}}
+\baylorsection
+\color{Black}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}home\scaleobj{1.25}{/}$<$user name$>$}}\color{Black} : On each Kodiak/Tardis node, this is the local home directory of each user where the files controlling user settings/history are stored.  Although the user account settings files (.bash\_profile, .bash\_history, etc.) are automatically distributed to each node so that any preference changes will apply to user sessions on any node, this data is not backed up and there is a limited storage capacity.  Thus, this directory should only be used to store small amounts of temporary data.  These directories are private and only accessible by that user.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}$\dots$ }}\color{Black} : The data in this directory is located on a network storage device and this drive is mounted on both the Kodiak and Tardis clusters, making it accessible from all of the master/compute nodes.  The contents of this directory are periodically backed up to tape drive from which data/code can be recovered in case of failure.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}$<$user name$>$ }}\color{Black} : This is the global home directory of each user where the input/output data for code/program execution and all permanent/important personal data should be stored.  As a subdirectory of \scaleobj{1.25}{/}data, the contents of these directories are backed up periodically, but like the local home directories, each user only has access to their personal directory.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}$\dots$ }}\color{Black} : This directory is associated with the user ``\textit{ion}'', but unlike the other user directories, it is accessible by all pCT users and all data, code, and documentation is shared by placing it in this directory.  While their is no format/organization imposed on the other user directories, the data bound for this directory must first be organized according to the format outlined in the next section of this document.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}incoming\scaleobj{1.25}{/}$<$user name$>$}}\color{Black} : This directory is where users should upload data to prior to moving it to the appropriate directory.  Once this data is finished being uploaded, it can either be moved to the user's personal directory \textbf{\color{DarkGreen}{\scaleobj{1.25}{/}data\scaleobj{1.25}{/}$<$user name$>$ }}\color{Black} or if it is immediately ready to share with the other users, it can be organized and moved to the user's staging directory \textbf{\color{DarkGreen}{\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}staging\scaleobj{1.25}{/}$<$user name$>$.}}\color{Black}
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_data\scaleobj{1.25}{/}$\dots$ }}\color{Black} : This directory is where the raw, preprocessed, projection, and reconstruction data/images are moved to make them available to the other pCT users.  Each type of data is stored in separate subdirectories and soft links to this data are created and organized in a directory hierarchy indicating their input/output data dependencies.  The directory/file naming and organizational scheme for each type of data and the soft links are outlined in the next section of this document.  Data/images should only be moved to this shared directory after having been verified as valid/accurate and having been organized appropriately.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}staging\scaleobj{1.25}{/}$<$user name$>$ }}\color{Black} : When a user is ready to share data with the other pCT users, it should be moved to this directory and a member of the ``\textit{ionadm}'' group will move this to the appropriate shared directory.  This data must be organized according to the format outlined in this document for data of this type.
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_code\scaleobj{1.25}{/}$\dots$ }}\color{Black} : This directory contains the code/programs used to generate simulated pCT data, preprocess raw experimental data, reconstruct images from experimental/simulated data, and tools for analyzing reconstructed images.  This directory also contains the code/program which calculates the water equivalent depth (WED) for a given list of beam angles and beam aim point (BAP) coordinates using the reconstructed RSP values for the target volume.  Each type of program and the corresponding code are stored in separate directories, and for each of these directories there is a ``\textit{master}'' directory containing the code/program that should be used/executed by users.  Each of these directories also contains separate subdirectories for each user involved in the development of the corresponding program and as a subdirectory of \textbf{\color{DarkGreen}{$\dots$\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion}}\color{Black}, this code is then accessible by other users involved in the development of this program, making collaboration with them easier.  Ideally, everyone will manage their code/software development with something like GitHub in which case they could develop code from their personal directory and make their code available to collaborators through GitHub, but this is not a strict requirement (just a strong suggestion).  In cases where there are multiple versions of a program being developed completely separately (as is the case with the preprocessing code and the old/new reconstruction code), there should be a ``\textit{master}'' version for each of these in separate subdirectories with names making these discernable.\\
+\vspace{-5mm}
+\flushleft\textbf{\color{DarkGreen}{\\\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_data\scaleobj{1.25}{/}pCT\_Documentation\scaleobj{1.25}{/}$\dots$ }}\color{Black} : Documentation relevant to pCT is stored in this directory, such as descriptions of the data format, coordinate system, and phantoms and pCT related publications (including student theses/dissertations).  This is a GitHub managed local repository allowing everyone to ``push'' contributions to the repository and ``pull'' updates/additions from others into their own local clone ensuring everyone has access to the latest information.\\
+\baylorsection
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\ul{\textbf{Key:}}\\
+\vspace{0.3cm}
+\color{DarkGreen}{\textbf{Green}}\color{Black}\textbf{ : directory names whose names do not change.}\\
+\color{Brown}{\textbf{Brown}}\color{Black}\textbf{ : directory names whose names vary depending on object name or date.}\\
+\color{Black}\textbf{\textit{Italic} and \color{blue}{Blue}\color{Black}}\textbf{ : file names. }\\
+%\rule{\textwidth}{1pt}
+\baylorsection
 %\vspace{0.8cm}
-{\\\textbf{{.../pCT\_data/organized\_data/ :} folder containing all of the pCT data/images (raw, processed, projection, and reconstruction), primarily as soft links to the actual data itself which is stored/organized in separate directories by data type.}}
-\begin{myEnumerate}[labelindent=0pt, leftmargin=*]
-    \item \ul{\textbf{Object Name}} : folder containing all of the experimental/simulated data and reconstructed images associated with the object with this name.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\color{DarkGreen}{\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_data\scaleobj{1.25}{/}organized\_data} \color{Black}: directory containing all of the pCT data (raw, processed, projection, and reconstruction), primarily as soft links to the actual data itself (with each type of data stored/organized in separate directories), organized in a hierarchy of subdirectories indicating data dependencies.}
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-        \item \ul{\textbf{Reference\_Images}} : folder containing reference images (xCT, RSP, etc) relevant to analysis/comparison of the data/images for this object and data type.
-        \item \ul{\textbf{Experimental}} : folder containing data and images generated from an experimental scan of the object.
+        \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}Phantom}}} \color{Black}: directory containing all of the experimental/simulated data and reconstructed images associated with the phantom/object named ``\textit{Phantom}''.
         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-            \item \ul{\textbf{YY-MM-DD}} : folder containing data and reconstructed images corresponding to all experimental scans of the object performed on this date.
+            \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Reference\_Images}}} \color{Black}: directory containing reference images (xCT, RSP, etc) relevant to analysis/comparison of the data/images for this object and data type.
+            \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Experimental}}} \color{Black}: directory containing data and images generated from an experimental scan of the object.
             \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                \item \ul{\textbf{XXXX[\_AAA]}} : folder containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
+                \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}YY-MM-DD}}} \color{Black}: directory containing data and reconstructed images corresponding to all experimental scans of the object performed on this date.
                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                    \item \ul{\textbf{Input}} : folder containing raw data generated by scan of object from each gantry angle and transmitted by event builder.
+                    \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}XXXX[\_AAA]}}} \color{Black}: directory containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \textbf{\textit{raw\_xxx.bin}} : binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
-                    \end{myEnumerate}
-                    \item \ul{\textbf{Output}} : folder containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
-                    \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \ul{\textbf{YY-MM-DD}} : folder containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
+                        \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Input}}} \color{Black}: directory containing raw data generated by scan of object from each gantry angle and transmitted by event builder.
                         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                            \item \textbf{\textit{calib.txt}} : text file containing calibration curve coefficients for WEPL calibration.
-                            \item \textbf{\textit{TVcalib.txt}} : text file containing calibration curve coefficients for tv corrected WEPL calibration.
-                            \item \textbf{\textit{settings.cfg}} : specifies scan properties such as gantry angle interval, t/v detector size, reconstruction volume dimensions, etc and initial settings to use for preprocessing/reconstruction.
-                            \item \textbf{\textit{projection\_xxx.bin}} : binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using tracker alignment, track reconstruction, and WEPL calibration routines and used as input to image reconstruction.
-                            \item \ul{\textbf{Reconstruction}} : folder containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
+                            \item \color{blue}{\textbf{\textit{raw\_xxx.bin}}} \color{Black}: binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
+                        \end{myEnumerate}
+                        \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Output}}} \color{Black}: directory containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
+                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                            \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}YY-MM-DD}}} \color{Black}: directory containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
                             \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                \item \ul{\textbf{YY-MM-DD}} : folder containing the preprocessed data generated on this date and the reconstructed images generated from this data.
+                                \item \color{blue}{\textbf{\textit{calib.txt}}} \color{Black}: text file containing calibration curve coefficients for WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{TVcalib.txt}}} \color{Black}: text file containing calibration curve coefficients for tv corrected WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{settings.cfg}}} \color{Black}: specifies scan properties such as gantry angle interval, t/v detector size, reconstruction volume dimensions, etc and initial settings to use for preprocessing/reconstruction.
+                                \item \color{blue}{\textbf{\textit{projection\_xxx.bin}}} \color{Black}: binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using tracker alignment, track reconstruction, and WEPL calibration routines and used as input to image reconstruction.
+                                \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Reconstruction}}} \color{Black}: directory containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
                                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                    \item \textbf{\textit{settings\_log.cfg}} : copy of \textbf{\textit{settings.cfg}} with any changes made to parameters/options applied at execution, if any.
-                                    \item \textbf{\textit{execution\_times.txt}} : execution times for various portions of preprocessing and/or reconstruction and total program execution time.
-                                    \item \textbf{\textit{bin\_counts.txt}} : linearized bin \# for each proton history, where linearized bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS.
-                                    \item \textbf{\textit{mean\_rel\_ut\_angle.txt}} : mean relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.
-                                    \item \textbf{\textit{mean\_rel\_uv\_angle.txt}} : mean relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
-                                    \item \textbf{\textit{mean\_WEPL.txt}} : mean WEPL value by linearized bin \#.
-                                    \item \textbf{\textit{stddev\_rel\_ut\_angle.txt}} : standard deviation of the relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.
-                                    \item \textbf{\textit{stddev\_rel\_uv\_angle.txt}} : standard deviation of the relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
-                                    \item \textbf{\textit{stddev\_WEPL.txt}} : standard deviation of the WEPL value by linearized bin \#.
-                                    \item \textbf{\textit{sinogram.txt}} : mean WEPL after statistical cuts with the $t_{bin}$ and angular bin $\theta_{bin}$ plane for each vertical bin $v_{bin}$ stacked on each other.
-                                    \item \textbf{\textit{hull.txt}} : text file specifying hull in 1s/0s with the xy plane for each slice stacked on each other.
-                                    \item \textbf{\textit{FBP.txt}} : text file specifying filtered back projection image with the xy plane for each slice stacked on each other.
-                                    \item \textbf{\textit{x\_0.txt}} : text file specifying voxel values of initial iterate with the xy plane for each slice stacked on each other.
-                                    \item \textbf{\textit{sin\_table.bin}} : file containing the tabulated values of sine function
-                                    \item \textbf{\textit{cos\_table.bin}} : file containing the tabulated values of cosine function
-                                    \item \textbf{\textit{coefficient.bin}} : file containing the tabulated scattering coefficient values for $\Sigma_1$/$\Sigma_2$ for $u_2-u_1$/$u_1$ values
-                                    \item \textbf{\textit{poly\_1\_2.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{1,2,3,4,5,6\}$
-                                    \item \textbf{\textit{poly\_2\_3.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$
-                                    \item \textbf{\textit{poly\_3\_4.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$
-                                    \item \textbf{\textit{poly\_2\_6.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$
-                                    \item \textbf{\textit{poly\_3\_12.bin}} : file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$
-                                    \item \textbf{\textit{MLP.bin}} : binary file with MLP path data for each history entering hull.
-                                    \item \textbf{\textit{WEPL.bin}} : binary file specifying WEPL value for each history entering hull.
-                                    \item \textbf{\textit{histories.bin}} : binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
-                                    \item \ul{\textbf{Images}} : folder containing reconstructed images generated using this preprocessed data.
+                                    \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}YY-MM-DD}}} \color{Black}: directory containing the preprocessed data generated on this date and the reconstructed images generated from this data.
                                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                        \item \ul{\textbf{YY-MM-DD}} : folder containing the reconstructed images generated on this date using the preprocessed data above.
-                                            \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                                \item \textbf{\textit{x\_k.dcm}} : DICOM images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.txt}} : text images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.png}} : PNG images of x after $k$ iterations.
-                                            \end{myEnumerate}
+                                        \item \color{blue}{\textbf{\textit{settings\_log.cfg}}} \color{Black}: copy of \textbf{\textit{settings.cfg}} with any changes made to parameters/options applied at execution, if any.
+                                        \item \color{blue}{\textbf{\textit{execution\_times.txt}}} \color{Black}: execution times for various portions of preprocessing and/or reconstruction and total program execution time.
+                                        \item \color{blue}{\textbf{\textit{bin\_counts.txt}}} \color{Black}: linearized bin \# for each proton history, where linearized bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS.\\
+                                        \item {\color{blue}{\textbf{\textit{mean\_rel\_ut\_angle.txt}}} \color{Black}: mean relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}\\
+                                        \item \color{blue}{\textbf{\textit{mean\_rel\_uv\_angle.txt}}} \color{Black}: mean relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
+                                        \item \color{blue}{\textbf{\textit{mean\_WEPL.txt}}} \color{Black}: mean WEPL value by linearized bin \#.
+                                        \item \color{blue}{\textbf{\textit{stddev\_rel\_ut\_angle.txt}}} \color{Black}: standard deviation of the relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.
+                                        \item \color{blue}{\textbf{\textit{stddev\_rel\_uv\_angle.txt}}} \color{Black}: standard deviation of the relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
+                                        \item \color{blue}{\textbf{\textit{stddev\_WEPL.txt}}} \color{Black}: standard deviation of the WEPL value by linearized bin \#.
+                                        \item \color{blue}{\textbf{\textit{sinogram.txt}}} \color{Black}: mean WEPL after statistical cuts with the $t_{bin}$ and angular bin $\theta_{bin}$ plane for each vertical bin $v_{bin}$ stacked on each other.
+                                        \item \color{blue}{\textbf{\textit{hull.txt}}} \color{Black}: text file specifying hull in 1s/0s with the xy plane for each slice stacked on each other.
+                                        \item \color{blue}{\textbf{\textit{FBP.txt}}} \color{Black}: text file specifying filtered back projection image with the xy plane for each slice stacked on each other.
+                                        \item \color{blue}{\textbf{\textit{x\_0.txt}}} \color{Black}: text file specifying voxel values of initial iterate with the xy plane for each slice stacked on each other.
+                                        \item \color{blue}{\textbf{\textit{sin\_table.bin}}} \color{Black}: file containing the tabulated values of sine function
+                                        \item \color{blue}{\textbf{\textit{cos\_table.bin}}} \color{Black}: file containing the tabulated values of cosine function
+                                        \item \color{blue}{\textbf{\textit{coefficient.bin}}} \color{Black}: file containing the tabulated scattering coefficient values for $\Sigma_1$/$\Sigma_2$ for $u_2-u_1$/$u_1$ values
+                                        \item \color{blue}{\textbf{\textit{poly\_1\_2.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{1,2,3,4,5,6\}$
+                                        \item \color{blue}{\textbf{\textit{poly\_2\_3.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$
+                                        \item \color{blue}{\textbf{\textit{poly\_3\_4.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$
+                                        \item \color{blue}{\textbf{\textit{poly\_2\_6.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$
+                                        \item \color{blue}{\textbf{\textit{poly\_3\_12.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$
+                                        \item \color{blue}{\textbf{\textit{MLP.bin}}} \color{Black}: binary file with MLP path data for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{WEPL.bin}}} \color{Black}: binary file specifying WEPL value for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{histories.bin}}} \color{Black}: binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
+                                        \item \color{DarkGreen}{{\textbf{\scaleobj{1.25}{/}Images}}} \color{Black}: directory containing reconstructed images generated using this preprocessed data.
+                                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                            \item \color{Brown}{{\textbf{\scaleobj{1.25}{/}YY-MM-DD}}} \color{Black}: directory containing the reconstructed images generated on this date using the preprocessed data above.
+                                                \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                                    \item \color{blue}{\textbf{\textit{x\_k.dcm}}} \color{Black}: DICOM images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.txt}}} \color{Black}: text images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.png}}} \color{Black}: PNG images of x after $k$ iterations.
+                                                \end{myEnumerate}
+                                        \end{myEnumerate}
                                     \end{myEnumerate}
                                 \end{myEnumerate}
                             \end{myEnumerate}
@@ -98,83 +144,83 @@
                     \end{myEnumerate}
                 \end{myEnumerate}
             \end{myEnumerate}
-        \end{myEnumerate}
-        %\newpage
-        \item \ul{\textbf{Simulated}} : folder containing data and images generated from a simulated scan of the object.
-        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-            \item \ul{\textbf{G\_YY-MM-DD}} : folder containing data and reconstructed images corresponding to all GEANT4 simulated scans of the object generated on this date.
+            %\newpage
+            \item \color{DarkGreen}{{\textbf{/Simulated}}} \color{Black}: directory containing data and images generated from a simulated scan of the object.
             \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                \item \ul{\textbf{XXXX[\_AAA]}} : folder containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
+                \item \color{Brown}{{\textbf{/G\_YY-MM-DD}}} \color{Black}: directory containing data and reconstructed images corresponding to all GEANT4 simulated scans of the object generated on this date.
                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                    \item \ul{\textbf{Input}} : folder containing raw data files generated by simulated scan of object for each gantry angle.
+                    \item \color{Brown}{{\textbf{/XXXX[\_AAA]}}} \color{Black}: directory containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \textbf{\textit{raw\_xxx.bin}} : binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
-                    \end{myEnumerate}
-                    \item \ul{\textbf{Output}} : folder containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
-                    \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \ul{\textbf{YY-MM-DD}} : folder containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
+                        \item \color{DarkGreen}{{\textbf{/Input}}} \color{Black}: directory containing raw data files generated by simulated scan of object for each gantry angle.
                         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                            \item \textbf{\textit{calib.txt}} : text file containing calibration curve coefficients for WEPL calibration.
-                            \item \textbf{\textit{TVcalib.txt}} : text file containing calibration curve coefficients for tv corrected WEPL calibration.
-                            \item \textbf{\textit{projection\_xxx.bin}} : binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.
-                            \item \ul{\textbf{Reconstruction}} : folder containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
+                            \item \color{blue}{\textbf{\textit{raw\_xxx.bin}}} \color{Black}: binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
+                        \end{myEnumerate}
+                        \item \color{DarkGreen}{{\textbf{/Output}}} \color{Black}: directory containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
+                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                            \item \color{Brown}{{\textbf{/YY-MM-DD}}} \color{Black}: directory containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
                             \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                \item \ul{\textbf{YY-MM-DD}} : folder containing the preprocessed data generated on this date and the reconstructed images generated from this data.
+                                \item \color{blue}{\textbf{\textit{calib.txt}}} \color{Black}: text file containing calibration curve coefficients for WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{TVcalib.txt}}} \color{Black}: text file containing calibration curve coefficients for tv corrected WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{projection\_xxx.bin}}} \color{Black}: binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.
+                                \item \color{DarkGreen}{{\textbf{/Reconstruction}}} \color{Black}: directory containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
                                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                    \item \textbf{\textit{hull.txt}} : text file specifying hull in 1s/0s.
-                                    \item \textbf{\textit{FBP.txt}} : text file specifying filtered back projection image.
-                                    \item \textbf{\textit{x\_0.txt}} : text file specifying voxel values of initial iterate.
-                                    \item \textbf{\textit{MLP.bin}} : binary file with MLP path data for each history entering hull.
-                                    \item \textbf{\textit{WEPL.bin}} : binary file specifying WEPL value for each history entering hull.
-                                    \item \textbf{\textit{histories.bin}} : binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
-                                    \item \ul{\textbf{Images}} : folder containing reconstructed images generated using this preprocessed data.
+                                    \item \color{Brown}{{\textbf{/YY-MM-DD}}} \color{Black}: directory containing the preprocessed data generated on this date and the reconstructed images generated from this data.
                                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                        \item \ul{\textbf{YY-MM-DD}} : folder containing the reconstructed images generated on this date using the preprocessed data above.
-                                            \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                                \item \textbf{\textit{x\_k.dcm}} : DICOM images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.txt}} : text images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.png}} : PNG images of x after $k$ iterations.
-                                            \end{myEnumerate}
+                                        \item \color{blue}{\textbf{\textit{hull.txt}}} \color{Black}: text file specifying hull in 1s/0s.
+                                        \item \color{blue}{\textbf{\textit{FBP.txt}}} \color{Black}: text file specifying filtered back projection image.
+                                        \item \color{blue}{\textbf{\textit{x\_0.txt}}} \color{Black}: text file specifying voxel values of initial iterate.
+                                        \item \color{blue}{\textbf{\textit{MLP.bin}}} \color{Black}: binary file with MLP path data for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{WEPL.bin}}} \color{Black}: binary file specifying WEPL value for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{histories.bin}}} \color{Black}: binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
+                                        \item \color{DarkGreen}{{\textbf{Images/}}} \color{Black}: directory containing reconstructed images generated using this preprocessed data.
+                                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                            \item \color{Brown}{{\textbf{YY-MM-DD/}}} \color{Black}: directory containing the reconstructed images generated on this date using the preprocessed data above.
+                                                \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                                    \item \color{blue}{\textbf{\textit{x\_k.dcm}}} \color{Black}: DICOM images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.txt}}} \color{Black}: text images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.png}}} \color{Black}: PNG images of x after $k$ iterations.
+                                                \end{myEnumerate}
+                                        \end{myEnumerate}
                                     \end{myEnumerate}
                                 \end{myEnumerate}
                             \end{myEnumerate}
                         \end{myEnumerate}
                     \end{myEnumerate}
                 \end{myEnumerate}
-            \end{myEnumerate}
-            \item \ul{\textbf{T\_YY-MM-DD}} : folder containing data and reconstructed images corresponding to all TOPAS simulated scans of the object generated on this date.
-            \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                \item \ul{\textbf{XXXX[\_AAA]}} : folder containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
+                \item \color{Brown}{{\textbf{T\_YY-MM-DD/}}} \color{Black}: directory containing data and reconstructed images corresponding to all TOPAS simulated scans of the object generated on this date.
                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                    \item \ul{\textbf{Input}} : folder containing raw data files generated by simulated scan of object for each gantry angle.
+                    \item \color{Brown}{{\textbf{XXXX[\_AAA]/}}} \color{Black}: directory containing data and reconstructed images corresponding to the experimental scan of the object for this particular run \# of this date, where the run \# is of the form $\textrm{``\textit{XXXX}''}$ with an optional descriptor tag $\textrm{``\textit{\_AAA}''}$ added specifying additional pertinent information about the scan, such as inferior $\textrm{``\textit{\_Inf}''}$ or superior $\textrm{``\textit{\_Sup}''}$ positioning as in the case of a head phantom.
                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \textbf{\textit{raw\_xxx.bin}} : binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
-                    \end{myEnumerate}
-                    \item \ul{\textbf{Output}} : folder containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
-                    \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                        \item \ul{\textbf{YY-MM-DD}} : folder containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
+                        \item \color{DarkGreen}{{\textbf{Input/}}} \color{Black}: directory containing raw data files generated by simulated scan of object for each gantry angle.
                         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                            \item \textbf{\textit{calib.txt}} : text file containing calibration curve coefficients for WEPL calibration.
-                            \item \textbf{\textit{TVcalib.txt}} : text file containing calibration curve coefficients for tv corrected WEPL calibration.
-                            \item \textbf{\textit{projection\_xxx.bin}} : binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.
-                            \item \ul{\textbf{Reconstruction}} : folder containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
+                            \item \color{blue}{\textbf{\textit{raw\_xxx.bin}}} \color{Black}: binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
+                        \end{myEnumerate}
+                        \item \color{DarkGreen}{{\textbf{Output/}}} \color{Black}: directory containing calibration and post processed data generated from analysis of raw data and used as input to image reconstruction.
+                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                            \item \color{Brown}{{\textbf{YY-MM-DD/}}} \color{Black}: directory containing the post processed ``\textit{projection\_xxx.bin}'' data generated on this date and the reconstructions using this data.
                             \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                \item \ul{\textbf{YY-MM-DD}} : folder containing the preprocessed data generated on this date and the reconstructed images generated from this data.
+                                \item \color{blue}{\textbf{\textit{calib.txt}}} \color{Black}: text file containing calibration curve coefficients for WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{TVcalib.txt}}} \color{Black}: text file containing calibration curve coefficients for tv corrected WEPL calibration.
+                                \item \color{blue}{\textbf{\textit{projection\_xxx.bin}}} \color{Black}: binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.
+                                \item \color{DarkGreen}{{\textbf{Reconstruction/}}} \color{Black}: directory containing preprocessed data and reconstructed images generated using the ``\textit{projection\_xxx.bin}'' data along with reference images relevant to the object.
                                 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                    \item \textbf{\textit{hull.txt}} : text file specifying hull in 1s/0s.
-                                    \item \textbf{\textit{FBP.txt}} : text file specifying filtered back projection image.
-                                    \item \textbf{\textit{x\_0.txt}} : text file specifying voxel values of initial iterate.
-                                    \item \textbf{\textit{MLP.bin}} : binary file with MLP path data for each history entering hull.
-                                    \item \textbf{\textit{WEPL.bin}} : binary file specifying WEPL value for each history entering hull.
-                                    \item \textbf{\textit{histories.bin}} : binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
-                                    \item \ul{\textbf{Images}} : folder containing reconstructed images generated using this preprocessed data.
+                                    \item \color{Brown}{{\textbf{YY-MM-DD/}}} \color{Black}: directory containing the preprocessed data generated on this date and the reconstructed images generated from this data.
                                     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                        \item \ul{\textbf{YY-MM-DD}} : folder containing the reconstructed images generated on this date using the preprocessed data above.
-                                            \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-                                                \item \textbf{\textit{x\_k.dcm}} : DICOM images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.txt}} : text images of x after $k$ iterations.
-                                                \item \textbf{\textit{x\_k.png}} : PNG images of x after $k$ iterations.
-                                            \end{myEnumerate}
+                                        \item \color{blue}{\textbf{\textit{hull.txt}}} \color{Black}: text file specifying hull in 1s/0s.
+                                        \item \color{blue}{\textbf{\textit{FBP.txt}}} \color{Black}: text file specifying filtered back projection image.
+                                        \item \color{blue}{\textbf{\textit{x\_0.txt}}} \color{Black}: text file specifying voxel values of initial iterate.
+                                        \item \color{blue}{\textbf{\textit{MLP.bin}}} \color{Black}: binary file with MLP path data for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{WEPL.bin}}} \color{Black}: binary file specifying WEPL value for each history entering hull.
+                                        \item \color{blue}{\textbf{\textit{histories.bin}}} \color{Black}: binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
+                                        \item \color{DarkGreen}{{\textbf{Images/}}} \color{Black}: directory containing reconstructed images generated using this preprocessed data.
+                                        \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                            \item \color{Brown}{{\textbf{YY-MM-DD/}}} \color{Black}: directory containing the reconstructed images generated on this date using the preprocessed data above.
+                                                \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
+                                                    \item \color{blue}{\textbf{\textit{x\_k.dcm}}} \color{Black}: DICOM images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.txt}}} \color{Black}: text images of x after $k$ iterations.
+                                                    \item \color{blue}{\textbf{\textit{x\_k.png}}} \color{Black}: PNG images of x after $k$ iterations.
+                                                \end{myEnumerate}
+                                        \end{myEnumerate}
                                     \end{myEnumerate}
                                 \end{myEnumerate}
                             \end{myEnumerate}
@@ -184,30 +230,31 @@
             \end{myEnumerate}
         \end{myEnumerate}
     \end{myEnumerate}
-\end{myEnumerate}
-\newpage
+\baylorsection
+%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vspace{0.5cm}
-\rule{\textwidth}{1pt}
-{\\\vspace{0.5cm}\textbf{{.../pCT\_data/raw\_data/ :} folder containing the raw experimental data organized by scan date}}
+\color{DarkGreen}{\textbf{\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_data/raw\_data}} \color{Black}\textbf{: directory containing the raw experimental data organized by scan date}
 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-    \item \ul{\textbf{YY-MM-DD}} : Folder containing all raw experimental data acquired from the scan beginning on \ul{\textbf{YY-MM-DD}}
+    \item \color{Brown}{{\textbf{/YY-MM-DD}}} \color{Black}: Folder containing all raw experimental data acquired from the scan beginning on ``\textit{YY-MM-DD}''
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-        \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}} : raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
+        \item \color{blue}{\textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}}} \color{Black}: raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
     \end{myEnumerate}
 \end{myEnumerate}
+\baylorsection
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\rule{\textwidth}{1pt}
-{\\\vspace{0.5cm}\textbf{{.../pCT\_data/processed\_data/ :} folder containing the processed experimental data organized by scan and processed dates}}
+%\rule{\textwidth}{1pt}
+\color{DarkGreen}{\textbf{\scaleobj{1.25}{/}data\scaleobj{1.25}{/}ion\scaleobj{1.25}{/}pCT\_data/preprocessed\_data}} \color{Black}\textbf{: directory containing the preprocessed experimental data organized by scan and processed dates}
 \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-    \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data corresponding to the raw experimental data acquired on \ul{\textbf{YY-MM-DD}}
+    \item \color{Brown}{{\textbf{/YY-MM-DD/}}} \color{Black}: Folder containing all processed experimental data corresponding to the raw experimental data acquired on ``\textit{YY-MM-DD}''
     \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-        \item \ul{\textbf{YY-MM-DD}} : Folder containing all processed experimental data generated on \ul{\textbf{YY-MM-DD}} from the raw data
+        \item \color{Brown}{{\textbf{/YY-MM-DD}}} \color{Black}: Folder containing all processed experimental data generated on ``\textit{YY-MM-DD}'' from the raw data
         \begin{myEnumerate}[labelindent=1pt, leftmargin=*]
-            \item \textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}} : processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
+            \item \color{blue}{\textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}}} \color{Black}: processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
         \end{myEnumerate}
     \end{myEnumerate}
 \end{myEnumerate}
+\baylorsection
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
