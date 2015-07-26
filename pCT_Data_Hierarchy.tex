@@ -1,0 +1,98 @@
+\documentclass[landscape,a4]{article}
+\usepackage{mymacros}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Create Title Page With Graphics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{fontscale/.style = {font=\relsize{#1}}
+    }
+    \begin{tikzpicture}[
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D/.style={
+% The shape:
+rectangle,
+% The size:
+minimum size=1pt,
+% The border:
+very thick,
+draw=green!50!black!50, % 50% red and 50% black,
+% and that mixed with 50% white
+% The filling:
+top color=white, % a shading that is white at the top...
+bottom color=green!50!black!20, % and something else at the bottom
+% Font
+font=\itshape\tiny
+},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+F/.style={
+% The shape:
+rectangle,
+rounded corners=5pt,
+% The size:
+minimum size=1mm,
+% The border:
+very thick,
+draw=green!50!black!50, % 50% red and 50% black,
+% and that mixed with 50% white
+% The filling:
+top color=white, % a shading that is white at the top...
+bottom color=blue!50!black!20, % and something else at the bottom
+% Font
+font=\itshape\tiny
+},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end/.style={
+% The shape:
+rectangle,
+rounded corners=5pt,
+% The size:
+minimum size=4mm,
+% The border:
+very thick,
+draw=green!50!black!50, % 50% red and 50% black,
+% and that mixed with 50% white
+% The filling:
+top color=white, % a shading that is white at the top...
+bottom color=red!50!black!20, % and something else at the bottom
+% Font
+font=\itshape\tiny
+},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+,>=stealth',thick,black!50,text=black,
+every new ->/.style={shorten >=0pt},
+graphs/every graph/.style={edges=rounded corners},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+pt/.style={draw,inner sep=0pt,minimum size=0.3pt,fill=black!50},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}}]
+\matrix[row sep=3mm,column sep=1mm]
+{\tiny
+                           &&&&&&&\node(013)[D]{pCT Data};    &&&&&&                       &&\\[0mm]
+                           &&\node(20)[pt]{};                 &&&&&&&\node(213)[pt]{};     &&&&&&\node (23)[pt]{};            &&\\
+                           &\node(30)[D]{Experimental};       &&&&&&&                      &&&&&&\node(33)[D]{Simulated};   &&\\
+                           &\node(40)[D]{YY-MM-DD(Run Date)}; &&&&&&&                      &&&&&&&&\\[-1mm]
+                           &\node(50)[D]{XXXX[\_AAA](Run\#)}; &&&&&&&                      &&&&&&&&\\
+\node(60)[D]{Input};       &&\node(50)[D]{Output};            &&&&&&&                      &&&&&&&&\\
+\node(60)[F]{raw\_xxx.bin};&&\node(50)[D]{YY-MM-DD};          &&&&&&&                      &&&&&&&&\\
+&\node(60)[F]{Calib.txt};  &\node(50)[F]{projection\_xxx.bin};&\node(613)[F]{settings.cfg};&\node(613)[D]{Reconstruction};&&&&&&&&\\
+&                          &                                  &                            & \node(613)[D]{YY-MM-DD};  &&&&&&&&&\\
+&\node(50)[F]{hull.txt};   &\node(613)[F]{FBP.txt};           &\node(613)[F]{x\_0.txt};    &\node(613)[F]{MLP.bin};    &\node(613)[F]{histories.bin};&\node(50)[D]{Images};&&&&&&&\\
+&                          &                                  &                            &                           &                            & \node(613)[D]{YY-MM-DD}; &&&&&;            &&\\
+&                          &                                  &                            &                           & \node(613)[F]{DICOM};   & \node(613)[F]{TEXT}; &\node(613)[F]{PNG};&&&&;            &&\\
+};
+%\matrix[row sep=5mm,column sep=1mm]
+%{
+%    \node (t) [task] {Established Tasks};\\
+%    \node (d) [development] {Newly ProposedIn Development};\\
+%    \node (r) [remove] {Potentially Replace};
+%};
+\graph [use existing nodes, edge label]
+{
+};
+
+\end{tikzpicture}
+
+\end{document} 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  20 JUL 2015 05:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  24 JUL 2015 23:44
 entering extended mode
 **pCT_Data_Organization_Format.tex
 (pCT_Data_Organization_Format.tex
@@ -1664,7 +1664,7 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 81.
+_IM_horz.png used on input line 82.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1679,7 +1679,7 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 106.
+_IM_horz.png used on input line 105.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1693,7 +1693,7 @@ File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
  <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 124.
+_IM_horz.png used on input line 125.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1707,7 +1707,7 @@ File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
  <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 157.
+_IM_horz.png used on input line 158.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1721,7 +1721,7 @@ File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
  <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 192.
+_IM_horz.png used on input line 193.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1735,7 +1735,7 @@ File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
  <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 218.
+_IM_horz.png used on input line 219.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1749,7 +1749,7 @@ File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
  <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 261.
+_IM_horz.png used on input line 262.
 (pdftex.def)             Requested size: 80.21643pt x 27.50148pt.
 
 
@@ -1759,21 +1759,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
  (pCT_Data_Organization_Format.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
 Package rerunfilecheck Info: File `pCT_Data_Organization_Format.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
  ) 
 Here is how much of TeX's memory you used:
- 34157 strings out of 493678
- 657911 string characters out of 3144251
- 786809 words of memory out of 3000000
- 36714 multiletter control sequences out of 15000+200000
+ 34158 strings out of 493678
+ 657929 string characters out of 3144251
+ 786810 words of memory out of 3000000
+ 36715 multiletter control sequences out of 15000+200000
  48938 words of font info for 133 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  63i,14n,86p,10466b,1892s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1786,7 +1786,7 @@ rogram Files/MiKTeX 2.9/fonts/type1/public/txfonts/txsya.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pCT_Data_Organization_Format.pdf (8 pages, 154284 bytes).
+Output written on pCT_Data_Organization_Format.pdf (8 pages, 154535 bytes).
 PDF statistics:
  201 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 500000)
