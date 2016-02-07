@@ -1,0 +1,24 @@
+
+(1) /home/<user name> : Small amounts of temporary data, such as the input data needed to run small jobs, can be stored in your personal directory in /home, but there is a limited amount of storage space and this data is not automatically backed up so this directory should not be used to store important or long term data.  Only you have read/write/execute permissions for this directory.
+
+(2) /data/<user name> : The input data for large batch jobs, permanent personal storage, and the input/output data from code development/debugging and testing should always be stored in your personal directory in /data along with the code itself.  The data in this directory is automatically backed up periodically so important data should always be stored here so it can be recovered if necessary (drive failure etc.).  The /data drive resides on the network storage drives and is mounted on both the Kodiak and Tardis clusters so this data is accessible from any of their master/compute nodes.
+
+(3) /data/ion/incoming/<user name> : When input/output data from 
+(3) /data/ion/pCT_data: The data stored in this directory is accessible by everyone and should only be added after it has been verified to be good and has been organized by data type.  The data in this directory MUST be properly organized by type of data (e.g. raw experimental, preprocessed experimental, experimental/simulated projection data files projection_xxx.bin, and reconstruction data) and conform to the pCT data format for that type of data.  Soft links to this data will then be created/organized in /organized_data using the script corresponding to that type of data.  When people are done testing data and are ready to share it with the group, this will be moved and organized with the rest of the shared data in /pctData. 
+(2) /data/ion/pCT_code: 
+
+The format for the /organized_data and /raw_data directories are basically done but there are a few more decisions to make about how the processed_data, projection_data, and reconstruction_data directories will be organized.  The biggest thing is to make sure the information needed to create/organize links to this data can be determined from the folder/file names.  Once this is done though, there will be scripts that can be ran to organize all of the data and links to the data automatically so nobody has to do this by hand and we can guarantee this is done in a consistent way.  I already created the script to organize the raw data and the processed_data will probably be stored in about the same way.  The projection and reconstruction data will probably be stored close to the same way as the organized data except these directories won't really need the Input/Output/Reconstruction/etc folders.  However, it might be easier to include these folders anyways just to make it easier to write a script to create/organize the links, I haven't decided yet.  Right now I am just trying to make sure everything from Akek gets organized well enough so we have all of the information we need to make any changes to the format later.  Right now I am storing these as:
+
+raw_data: organized by scan date with ALL data from a particular scan stored in /<scan date> with YYMMDD format for dates
+processed_data: organized by scan date like raw_data but then also by processed data so data in /<scan date>/<processed_date> is the data from YYMMDD scan date and YYMMDD processed date.
+projection_data: organized in <object name>/<Experimental/Simulated>/<scan/simulation date>/<run # XXXX>/
+
+recoSlices
+	Akek:43,644 files, 413 folders, 46,922MB (49,200,787,966B)
+	Kodiak: 43,644 files, 413 folders, 46,922MB (49,200,787,966B)
+ValentinaTry
+	Akek: files, folders, MB ( B)
+	Kodiak: 6661 files, 66 folders, 102 GB ( 109,496,217,469 B)
+PreviousData:
+	Kodiak:/organized_data: 3736 files, 53 folders, 1 symbolic link, 172 GB, 184,475,505,174 B
+	Kodiak:/data/schultze/Akek: 3836 files, 63 folders, 172 GB, 184,555,605,061 B

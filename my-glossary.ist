@@ -1,0 +1,29 @@
+actual '?'
+encap '|'
+level '!'
+quote '"'
+keyword "\\glossaryentry"
+preamble "\\glossarypreamble\n\\setcounter{@glossary@entry@counter}{0}\\begin{tcolorbox}[reset, @DEFAULT@STYLE, title={\\phantomsection\\glossarysection[\\glossarytoctitle]{\\anttmcap18pt\\glossarytitle}}, before=\\par\\smallskip, after=\\par\\smallskip, colframe=blue!25!black, boxsep=2mm, top=1mm, left=2mm, colback=blue!5!yellow!10!, fonttitle=\\Large\\bfseries, toptitle=0mm, bottomtitle=-2mm, boxrule=3pt, colbacktitle=black!50!white, coltitle=white, left skip=0mm]\\begin{theglossary}\\glossaryheader\n"
+postamble "\%\n\\end{theglossary}\\end{tcolorbox}\\glossarypostamble\n"
+group_skip "\\glsgroupskip\n"
+item_0 "\%\n"
+item_1 "\%\n"
+item_2 "\%\n"
+item_01 "\%\n"
+item_x1 "\\relax \\glsresetentrylist\n"
+item_12 "\%\n"
+item_x2 "\\relax \\glsresetentrylist\n"
+delim_0 "\{\\glossaryentrynumbers\{\\relax "
+delim_1 "\{\\glossaryentrynumbers\{\\relax "
+delim_2 "\{\\glossaryentrynumbers\{\\relax "
+delim_t "\}\}"
+delim_n "\\delimN "
+delim_r "\\delimR "
+headings_flag 1
+heading_prefix "  \\glsgroupheading\{"
+heading_suffix "\}\n\\relax\\glsresetentrylist"
+symhead_positive "glssymbols"
+numhead_positive "glsnumbers"
+page_compositor "."
+suffix_2p ""
+suffix_3p ""
