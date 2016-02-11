@@ -276,94 +276,48 @@ The various programs are stored in separate directories and each of these direct
 \sectionheader{File List}
 \vspace{-9mm}
 \flushleft
- \color{DarkBlue}{\textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}}} \color{Black}: raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
- \\
-\color{DarkBlue}{\textbf{\textit{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}}} \color{Black}: processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.
-\\
-\color{DodgerBlue3}{\textbf{\textit{settings\_log.cfg}}} \color{Black}: copy of \textbf{\textit{settings.cfg}} with any changes made to parameters/options applied at execution, if any.
-\\
-\color{DodgerBlue3}{\textbf{\textit{execution\_times.txt}}} \color{Black}: Listing of the preprocessing/reconstruction options/parameters used for a particular reconstruction along with the execution times for various individual tasks and portions of preprocessing and/or reconstruction and total program execution time organized as a series of ``key=value'' entries in a text file in the directory with the corresponding results.
-\\
-\color{DodgerBlue3}{\textbf{\textit{execution\_times.csv}}} \color{Black}: The same information listed in the \color{DodgerBlue3}{\textbf{\textit{execution\_times.txt}}} \color{Black} files for each execution are also stored in this global comma separated value (.csv) file with the execution information organized into separate columns and each row corresponding to a different reconstruction, thereby maintaining a single file where the execution information for all previous reconstructions can be found in the same place.  Upon execution of a new reconstruction, a new row entry is added for storage of the corresponding execution information.
-\\
-\color{DodgerBlue3}{\textbf{\textit{bin\_counts.txt}}} \color{Black}: linearized bin \# for each proton history, where linearized bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS.
-\\
-{\color{DodgerBlue3}{\textbf{\textit{mean\_rel\_ut\_angle.txt}}} \color{Black}: mean relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}
-\\
-\color{DodgerBlue3}{\textbf{\textit{mean\_rel\_uv\_angle.txt}}} \color{Black}: mean relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
-\\
-\color{DodgerBlue3}{\textbf{\textit{mean\_WEPL.txt}}} \color{Black}: mean WEPL value by linearized bin \#.
-\\
-\color{DodgerBlue3}{\textbf{\textit{stddev\_rel\_ut\_angle.txt}}} \color{Black}: standard deviation of the relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.
-\\
-\color{DodgerBlue3}{\textbf{\textit{stddev\_rel\_uv\_angle.txt}}} \color{Black}: standard deviation of the relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.
-\\
-\color{DodgerBlue3}{\textbf{\textit{stddev\_WEPL.txt}}} \color{Black}: standard deviation of the WEPL value by linearized bin \#.
-\\
-\color{DodgerBlue3}{\textbf{\textit{sinogram.txt}}} \color{Black}: mean WEPL after statistical cuts with the $t_{bin}$ and angular bin $\theta_{bin}$ plane for each vertical bin $v_{bin}$ stacked on each other.
-\\
-\color{DodgerBlue3}{\textbf{\textit{hull.txt}}} \color{Black}: text file specifying hull in 1s/0s with the xy plane for each slice stacked on each other.
-\\
-\color{DodgerBlue3}{\textbf{\textit{FBP.txt}}} \color{Black}: text file specifying filtered back projection image with the xy plane for each slice stacked on each other.
-\\
-\color{DodgerBlue3}{\textbf{\textit{x\_0.txt}}} \color{Black}: text file specifying voxel values of initial iterate with the xy plane for each slice stacked on each other.
-\\
-\color{DodgerBlue3}{\textbf{\textit{sin\_table.bin}}} \color{Black}: file containing the tabulated values of sine function
-\\
-\color{DodgerBlue3}{\textbf{\textit{cos\_table.bin}}} \color{Black}: file containing the tabulated values of cosine function
-\\
-\color{DodgerBlue3}{\textbf{\textit{coefficient.bin}}} \color{Black}: file containing the tabulated scattering coefficient values for $\Sigma_1$/$\Sigma_2$ for $u_2-u_1$/$u_1$ values
-\\
-\color{DodgerBlue3}{\textbf{\textit{poly\_1\_2.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{1,2,3,4,5,6\}$
-\\
-\color{DodgerBlue3}{\textbf{\textit{poly\_2\_3.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$
-\\
-\color{DodgerBlue3}{\textbf{\textit{poly\_3\_4.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$
-\\
-\color{DodgerBlue3}{\textbf{\textit{poly\_2\_6.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$
-\\
-\color{DodgerBlue3}{\textbf{\textit{poly\_3\_12.bin}}} \color{Black}: file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$
-\\
-\color{DodgerBlue3}{\textbf{\textit{MLP.bin}}} \color{Black}: binary file with MLP path data for each history entering hull.
-\\
-\color{DodgerBlue3}{\textbf{\textit{WEPL.bin}}} \color{Black}: binary file specifying WEPL value for each history entering hull.
-\\
-\color{DodgerBlue3}{\textbf{\textit{histories.bin}}} \color{Black}: binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.
-\\
-\color{DodgerBlue3}{\textbf{\textit{calib.txt}}} \color{Black}: text file containing calibration curve coefficients for WEPL calibration.
-\\
-\color{DodgerBlue3}{\textbf{\textit{TVcalib.txt}}} \color{Black}: text file containing calibration curve coefficients for tv corrected WEPL calibration.
-\\
-\color{DarkBlue}{\textbf{\textit{projection\_xxx.bin}}} \color{Black}: binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.
-\\
-\color{DarkBlue}{\textbf{\textit{raw\_xxx.bin}}} \color{Black}: binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.
-\\
-bin\_counts.txt
-\\
-bin\_counts\_post.txt
-\\
-bin\_counts\_pre.txt
-\\
-execution\_times.csv
-\\
-execution\_times.txt
-\\
-FBP\_hull.txt
-\\
-FBP\_median\_filtered.txt
-\\
-hull\_avg\_filtered.txt
-\\
-MSC\_counts.txt
-\\
-MSC\_hull.txt
-\\
-sinogram\_pre.txt
-\\
-\color{DarkBlue}{\textbf{\textit{x\_k.dcm}}} \color{Black}: DICOM images of x after $k$ iterations.
-\color{DarkBlue}{\textbf{\textit{x\_k.txt}}} \color{Black}: text images of x after $k$ iterations.
-\color{DarkBlue}{\textbf{\textit{x\_k.png}}} \color{Black}: PNG images of x after $k$ iterations.
-\vspace{-7mm}
+\begin{enumerate}
+	\item \fileentry[DarkBlue]{$<$object$>$\_XXXX[\_AAA]\_xxx.dat}{raw experimental data for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.}
+	\item \fileentry[DarkBlue]{$<$object$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}{processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named ``\textit{$<$object$>$}'', from run \# ``\textit{XXXX[\_AAA]}'', where ``\textit{XXXX}'' is a 4 digit \# with leading zeros and ``\textit{\_AAA}'' is an optional descriptor tag, and ``\textit{xxx}'' is the gantry angle at which the data was acquired.}
+	\item \fileentry[DarkBlue]{projection\_xxx.bin}{binary files containing tracker coordinates and WEPL data associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.}
+	\item \fileentry[DarkBlue]{raw\_xxx.bin}{binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\textrm{``\textit{xxx}''} =\{\textrm{``\textit{001}''}, \textrm{``\textit{002}''}, \textrm{``\textit{003}''}, \cdots\}$.}
+	\item \fileentry{calib.txt}{text file containing calibration curve coefficients for WEPL calibration.}
+	\item \fileentry{TVcalib.txt}{text file containing calibration curve coefficients for tv corrected WEPL calibration.}
+	\item \fileentry{settings\_log.cfg}{copy of \textbf{\textit{settings.cfg}} with any changes made to parameters/options applied at execution, if any.}
+	\item \fileentry{execution\_times.txt}{Listing of the preprocessing/reconstruction options/parameters used for a particular reconstruction along with the execution times for various individual tasks and portions of preprocessing and/or reconstruction and total program execution time organized as a series of ``key=value'' entries in a text file in the directory with the corresponding results.}
+	\item \fileentry{execution\_times.csv}{The same information listed in the 		\color{DodgerBlue3}{\textbf{\textit{execution\_times.txt}}}\color{Black} files for each execution are also stored in this global comma separated value (.csv) file with the execution information organized into separate columns and each row corresponding to a different reconstruction, thereby maintaining a single file where the execution information for all previous reconstructions can be found in the same place.  Upon execution of a new reconstruction, a new row entry is added for storage of the corresponding execution information.}
+	\item \fileentry{sin\_table.bin}{file containing the tabulated values of sine function}
+	\item \fileentry{cos\_table.bin}{file containing the tabulated values of cosine function}
+	\item \fileentry{coefficient.bin}{file containing the tabulated scattering coefficient values for $\Sigma_1$/$\Sigma_2$ for $u_2-u_1$/$u_1$ values}
+	\item \fileentry{poly\_1\_2.bin}{file containing the tabulated MLP polynomial values with coefficients $\{1,2,3,4,5,6\}$}
+	\item \fileentry{poly\_2\_3.bin}{file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$}
+	\item \fileentry{poly\_3\_4.bin}{file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$}
+	\item \fileentry{poly\_2\_6.bin}{file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$}
+	\item \fileentry{poly\_3\_12.bin}{file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$}
+	\item \fileentry{bin\_counts.txt}{linearized bin \# for each proton history, where linearized bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS.}
+	\item \fileentry{mean\_rel\_ut\_angle.txt}{mean relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}
+	\item \fileentry{mean\_rel\_uv\_angle.txt}{mean relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.}
+	\item \fileentry{mean\_WEPL.txt}{mean WEPL value by linearized bin \#.}
+	\item \fileentry{stddev\_rel\_ut\_angle.txt}{standard deviation of the relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}
+	\item \fileentry{stddev\_rel\_uv\_angle.txt}{standard deviation of the relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.}
+	\item \fileentry{stddev\_WEPL.txt}{standard deviation of the WEPL value by linearized bin \#.}
+	\item \fileentry{sinogram.txt}{mean WEPL after statistical cuts with the $t_{bin}$ and angular bin $\theta_{bin}$ plane for each vertical bin $v_{bin}$ stacked on each other.}
+	\item \fileentry{MSC\_counts.txt}{text file specifying Modified Space/Silhouette Carving generated image of integer values indicating the \# of times each voxel was identified as lying outside the object with the xy plane of each slice stacked on each other.}
+	\item \fileentry{MSC\_hull.txt}{text file specifying Modified Space/Silhouette Carving generated hull in 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{hull.txt}{text file specifying hull in 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{hull\_avg\_filtered.txt}{text file specifying hull after applying an average filter and applying a threshold to the result so that all voxels with value less than some threshold (typically 0.01-0.1) are set to 0, thereby restoring image to 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{FBP.txt}{text file specifying filtered back projection image with the xy plane of each slice stacked on each other.}
+	\item \fileentry{FBP\_hull.txt}{text file specifying object hull generated from the filtered back projection image by setting all voxels with RSP less than a user definable threshold (typically 0.6) with the xy plane of each slice stacked on each other.}
+	\item \fileentry{FBP\_median\_filtered.txt}{text file specifying filtered back projection image with the xy plane for each slice stacked on each other.}
+	\item \fileentry{x\_0.txt}{text file specifying voxel values of initial iterate with the xy plane of each slice stacked on each other.}
+	\item \fileentry[DarkBlue]{x\_k.dcm}{DICOM images of x after $k$ iterations.}
+	\item \fileentry[DarkBlue]{x\_k.txt}{text images of x after $k$ iterations.}
+	\item \fileentry[DarkBlue]{x\_k.png}{PNG images of x after $k$ iterations.}
+	\item \fileentry{MLP.bin}{binary file with MLP path data for each history entering hull.}
+	\item \fileentry{WEPL.bin}{binary file specifying WEPL value for each history entering hull.}
+	\item \fileentry{histories.bin}{binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.}
+\end{enumerate}
+%\vspace{-7mm}
 \baylorsection
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-9mm}

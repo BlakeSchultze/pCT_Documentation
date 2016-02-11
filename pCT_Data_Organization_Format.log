@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.4)  11 FEB 2016 07:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.4)  11 FEB 2016 08:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3531,108 +3531,114 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 64.
 . O{BaylorGoldCMYK}' on line 548.
 .................................................
 .................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fileentry with sig. 's O{documentation-file} m m' on line
+. 561.
+.................................................
+.................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbbashbox' with sig. ' O{tcbbashboxblueStyle} o d()
-. t! t`' on line 597.
+. t! t`' on line 610.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tcbinlinebashbox with sig. ' s v ' on line 608.
+. Defining command \tcbinlinebashbox with sig. ' s v ' on line 621.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'boxedfigure' with sig. ' o m m O{fig:fig\the \value
-. {figure}}' on line 611.
+. {figure}}' on line 624.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'boxedtable' with sig. ' o m m O{h!} O{tab:tab\the
-. \value {table}}' on line 614.
+. \value {table}}' on line 627.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldAMS' with sig. 's O{alignat}' on line 623.
+. Defining environment 'boldAMS' with sig. 's O{alignat}' on line 636.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldalign' with sig. 's' on line 628.
+. Defining environment 'boldalign' with sig. 's' on line 641.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldalignat' with sig. 's' on line 633.
+. Defining environment 'boldalignat' with sig. 's' on line 646.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcblistbox' with sig. 'm O{\arabic } d() m d()' on
-. line 684.
+. line 697.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbeqnlistbox' with sig. 's O{\arabic } d() m d()' on
-. line 701.
+. line 714.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbfigure' with sig. 'O{figuresStyle, label =
-. fig:fig\the \value {figure}} m m' on line 705.
+. fig:fig\the \value {figure}} m m' on line 718.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'tcbfigbox' with sig. 'm o' on line 716.
+. Defining environment 'tcbfigbox' with sig. 'm o' on line 729.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'preproblemenv' with sig. 's m O{preliminariesStyle}'
-. on line 730.
+. on line 743.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'problem' with sig. 'd() s o o t'' on line 812.
+. Defining environment 'problem' with sig. 'd() s o o t'' on line 825.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'solution' with sig. 's m o' on line 836.
+. Defining environment 'solution' with sig. 's m o' on line 849.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'tcbsolutionverb' with sig. 's o' on line 847.
+. Defining environment 'tcbsolutionverb' with sig. 's o' on line 860.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'proofenv' with sig. 's m o' on line 857.
+. Defining environment 'proofenv' with sig. 's m o' on line 870.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'assignment-coverpage' with sig. 'm m m m m' on line
-. 951.
+. 964.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'documentation-coverpage' with sig. 'm m' on line 987.
+. Defining environment 'documentation-coverpage' with sig. 'm m' on line 1000.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'collaboration-coverpage' with sig. 'm m m' on line
-. 1030.
+. 1043.
 .................................................
 )
 (c:/texlive/2014/texmf-dist/tex/latex/mymacros/my-listings.sty
@@ -3924,36 +3930,47 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 331.
+_IM_horz.png used on input line 297.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [8] (./pCT_Data_Organization_Format.mw)
+File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
+c file (type png)
+
+<use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
+Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
+_IM_horz.png used on input line 317.
+(pdftex.def)             Requested size: 72.90831pt x 25.0pt.
+\openout7 = `pCT_Data_Organization_Format.mw'.
+
+
+[9] (./pCT_Data_Organization_Format.mw)
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 \openout7 = `pCT_Data_Organization_Format.sta'.
 
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
- [9] (./pCT_Data_Organization_Format.mw)
+ [10] (./pCT_Data_Organization_Format.mw)
 
 Package catoptions Warning: Undefined options 
 (catoptions)                [Family, Option, Value]: 
 (catoptions)                inputenc.sty,utf8,. 
 (catoptions)                Default action already taken in each case .
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
 (./pCT_Data_Organization_Format.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 374.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 328.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 53374 strings out of 493109
- 1076559 string characters out of 6138582
- 1430914 words of memory out of 5000000
- 55542 multiletter control sequences out of 15000+600000
+ 53423 strings out of 493109
+ 1077078 string characters out of 6138582
+ 1431049 words of memory out of 5000000
+ 55549 multiletter control sequences out of 15000+600000
  64996 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,16n,111p,10552b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3971,10 +3988,10 @@ b><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/201
 type1/public/lm/lmri10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lm
 tt10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb>
-Output written on pCT_Data_Organization_Format.pdf (10 pages, 507893 bytes).
+Output written on pCT_Data_Organization_Format.pdf (11 pages, 510658 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 149 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
