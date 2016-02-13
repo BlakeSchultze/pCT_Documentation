@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.4)  11 FEB 2016 08:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.4)  13 FEB 2016 10:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3361,17 +3361,17 @@ LaTeX Font Info:    Overwriting symbol font `lettersP' in version `bold'
 )
 (c:/texlive/2014/texmf-dist/tex/latex/mymacros/my-macros.sty
 Package: my-macros 2013/01/13 Custom Package
-LaTeX Info: Redefining \( on input line 55.
-Package hyperref Info: Option `colorlinks' set `true' on input line 64.
+LaTeX Info: Redefining \( on input line 57.
+Package hyperref Info: Option `colorlinks' set `true' on input line 66.
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@init@counter with sig. 'm O{1}' on line 208.
+. Defining command \@init@counter with sig. 'm O{1}' on line 211.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@init@length with sig. ' m O{0pt}' on line 209.
+. Defining command \@init@length with sig. ' m O{0pt}' on line 212.
 .................................................
 \c@@chap@counter=\count401
 \c@@tcb@listings@title@counter=\count402
@@ -3395,250 +3395,299 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 64.
 \c@@tcb@terminal@listing@counter=\count420
 \c@@glossary@entry@counter=\count421
 \c@@pld@instances=\count422
-\shadowsize=\skip183
-\@tcbfigbox@left@skip=\skip184
+\@coverpage@textwidth=\skip183
+\@coverpage@hoffset=\skip184
+\@coverpage@textheight=\skip185
+\@coverpage@voffset=\skip186
+\@coverpage@headsep=\skip187
+\@coverpage@landscape@textwidth=\skip188
+\@coverpage@landscape@hoffset=\skip189
+\@coverpage@landscape@textheight=\skip190
+\@coverpage@landscape@voffset=\skip191
+\@coverpage@landscape@headsep=\skip192
+\@document@textwidth=\skip193
+\@document@hoffset=\skip194
+\@document@textheight=\skip195
+\@document@voffset=\skip196
+\@document@headsep=\skip197
+\@document@landscape@textwidth=\skip198
+\@document@landscape@hoffset=\skip199
+\@document@landscape@textheight=\skip200
+\@document@landscape@voffset=\skip201
+Normal \skip register pool exhausted, switching to extended pool.
+\@document@landscape@headsep=\skip256
+\@tcbfigbox@left@skip=\skip257
+\@par@indent=\skip258
+\shadowsize=\skip259
+\@author@date@skip=\skip260
+\@author@dept@image@skip=\skip261
+\@author@date@height=\skip262
 \do@VerbBox=\toks75
 \@fancybox=\box137
 \@Sbox=\box138
-\@macro@length=\skip185
-\@macro@width=\skip186
-\@macro@height=\skip187
-\@macro@depth=\skip188
+\@macro@length=\skip263
+\@macro@width=\skip264
+\@macro@height=\skip265
+\@macro@depth=\skip266
 \@macro@dimension=\dimen404
-\@macro@shift=\skip189
+\@macro@shift=\skip267
 \@macro@savebox=\box139
+\@macro@saveboxA=\box140
+\@macro@saveboxB=\box141
+\@macro@saveboxC=\box142
+\@macro@saveboxD=\box143
+\@macro@saveboxE=\box144
 \c@@macro@counter=\count423
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@set@coverpage@dimensions with sig. '' on line 300.
+. Defining command \@set@coverpage@dimensions with sig. '' on line 337.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@set@document@dimensions with sig. '' on line 318.
+. Defining command \@set@document@dimensions with sig. '' on line 357.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \blankpage with sig. 's' on line 325.
+. Defining command \blankpage with sig. 's' on line 364.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \autotcbref with sig. 'D(){figure} O{1}' on line 332.
+. Defining command \autotcbref with sig. 'D(){figure} O{1}' on line 371.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \settowidthofalign with sig. 'm m' on line 347.
+. Defining command \settowidthofalign with sig. 'm m' on line 386.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@add@IBP@node with sig. 'm' on line 350.
+. Defining command \@add@IBP@node with sig. 'm' on line 389.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addIBProw with sig. 'm m s' on line 369.
+. Defining command \addIBProw with sig. 'm m s' on line 408.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@add@arrow@sign with sig. 'm' on line 377.
+. Defining command \@add@arrow@sign with sig. 'm' on line 416.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@draw@IBP@arrows with sig. '' on line 397.
+. Defining command \@draw@IBP@arrows with sig. '' on line 436.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcbequation with sig. 's m m O{tcbequationStyle}' on line
-. 411.
+. 450.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \filledenumshape with sig. 'O{circle} m m m' on line 419.
+. Defining command \filledenumshape with sig. 'O{circle} m m m' on line 458.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@set@tcblistbox@settings with sig. 'm' on line 428.
+. Defining command \@set@tcblistbox@settings with sig. 'm' on line 467.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcblistboxentrylabel with sig. 'O{circle} m o' on line
-. 440.
+. 479.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tcblistboxentry with sig. 's m m O{\arabic }' on line 456.
+. Defining command \tcblistboxentry with sig. 's m m O{\arabic }' on line 495.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcbeqnlistboxentry with sig. 's d() O{arabic} m m s
-. O{solutionlistsStyle}' on line 470.
+. O{solutionlistsStyle}' on line 509.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcbfigboxlist with sig. '>{\SplitList {\\}} m
-. O{\@tcbfigbox@width }' on line 478.
+. O{\@tcbfigbox@width }' on line 517.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tcbfigboxrow with sig. '>{\SplitList {|}} m' on line 486.
+. Defining command \tcbfigboxrow with sig. '>{\SplitList {|}} m' on line 525.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcbfigboxfigure with sig. '>{ \SplitList {;}} m' on line
-. 488.
+. 527.
 .................................................
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \autotcbref with sig. 'D(){figure} O{1}' on line 505.
+. Redefining command \autotcbref with sig. 'D(){figure} O{1}' on line 544.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \tcbfigboximage with sig. 'm m G{\@default@fig@label }' on
-. line 513.
+. line 552.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \@section@sep with sig. 'm m' on line 529.
+. Defining command \@section@sep with sig. 'm m' on line 568.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \baylorsection with sig. '' on line 531.
+. Defining command \baylorsection with sig. '' on line 570.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \sectionheader with sig. 'm O{BaylorGreenCMYK}
-. O{BaylorGoldCMYK}' on line 548.
+. Defining command \sectionheader with sig. 's O{\anttmcap 14pt} m
+. O{BaylorGreenCMYK} O{BaylorGoldCMYK} t!' on line 618.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \coloredtext with sig. 'm m' on line 625.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \fileentry with sig. 's O{documentation-file} m m' on line
-. 561.
+. 633.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \direntry with sig. 's O{documentation-constdir} m m' on
+. line 641.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \definitionentry with sig. 's O{documentation-file} m m' on
+. line 649.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-environment"
+. 
+. Defining environment 'legend' with sig. 's O{documentation-file}' on line
+. 669.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbbashbox' with sig. ' O{tcbbashboxblueStyle} o d()
-. t! t`' on line 610.
+. t! t`' on line 718.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tcbinlinebashbox with sig. ' s v ' on line 621.
+. Defining command \tcbinlinebashbox with sig. ' s v ' on line 729.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'boxedfigure' with sig. ' o m m O{fig:fig\the \value
-. {figure}}' on line 624.
+. {figure}}' on line 732.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'boxedtable' with sig. ' o m m O{h!} O{tab:tab\the
-. \value {table}}' on line 627.
+. \value {table}}' on line 735.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldAMS' with sig. 's O{alignat}' on line 636.
+. Defining environment 'boldAMS' with sig. 's O{alignat}' on line 744.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldalign' with sig. 's' on line 641.
+. Defining environment 'boldalign' with sig. 's' on line 749.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'boldalignat' with sig. 's' on line 646.
+. Defining environment 'boldalignat' with sig. 's' on line 754.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcblistbox' with sig. 'm O{\arabic } d() m d()' on
-. line 697.
+. line 805.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbeqnlistbox' with sig. 's O{\arabic } d() m d()' on
-. line 714.
+. line 822.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'tcbfigure' with sig. 'O{figuresStyle, label =
-. fig:fig\the \value {figure}} m m' on line 718.
+. fig:fig\the \value {figure}} m m' on line 826.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'tcbfigbox' with sig. 'm o' on line 729.
+. Defining environment 'tcbfigbox' with sig. 'm o' on line 837.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'preproblemenv' with sig. 's m O{preliminariesStyle}'
-. on line 743.
+. on line 851.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'problem' with sig. 'd() s o o t'' on line 825.
+. Defining environment 'problem' with sig. 'd() s o o t'' on line 933.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'solution' with sig. 's m o' on line 849.
+. Defining environment 'solution' with sig. 's m o' on line 957.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'tcbsolutionverb' with sig. 's o' on line 860.
+. Defining environment 'tcbsolutionverb' with sig. 's o' on line 968.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'proofenv' with sig. 's m o' on line 870.
+. Defining environment 'proofenv' with sig. 's m o' on line 978.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
 . Defining environment 'assignment-coverpage' with sig. 'm m m m m' on line
-. 964.
+. 1069.
 .................................................
-.................................................
-. LaTeX info: "xparse/define-environment"
-. 
-. Defining environment 'documentation-coverpage' with sig. 'm m' on line 1000.
-.................................................
+\@coverpage@vskip=\skip268
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
-. Defining environment 'collaboration-coverpage' with sig. 'm m m' on line
-. 1043.
+. Defining environment 'documentation-coverpage' with sig. 'm m m' on line
+. 1104.
 .................................................
 )
 (c:/texlive/2014/texmf-dist/tex/latex/mymacros/my-listings.sty
@@ -3671,46 +3720,46 @@ runsystem(del "pCT_Data_Organization_Format.aex")...executed.
 (./pCT_Data_Organization_Format.aux)
 \openout1 = `pCT_Data_Organization_Format.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/mbb/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 38.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/mbb/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 38.
-LaTeX Font Info:    Try loading font information for LS1+stix on input line 38.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for LS1+stix on input line 26.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/stix/ls1stix.fd
 File: ls1stix.fd 2012/12/23 v1.1.0-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 38.
-LaTeX Font Info:    Try loading font information for LS2+stix on input line 38.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for LS2+stix on input line 26.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/stix/ls2stix.fd
 File: ls2stix.fd 2012/12/23 v1.1.0-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 38.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -3719,7 +3768,7 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count437
 \scratchdimen=\dimen405
-\scratchbox=\box140
+\scratchbox=\box145
 \nofMPsegments=\count438
 \nofMParguments=\count439
 \everyMPshowfont=\toks76
@@ -3744,8 +3793,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box141
-Package hyperref Info: Link coloring ON on input line 38.
+\AtBeginShipoutBox=\box146
+Package hyperref Info: Link coloring ON on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -3755,16 +3804,16 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count443
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
-LaTeX Info: Redefining \dots on input line 38.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \dots on input line 26.
 
 (./_minted-pCT_Data_Organization_Format/default-pyg-prefix.pygstyle)
 \c@lstlisting=\count444
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 38.
+LaTeX Info: Redefining \selectfont on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-
 dictionary/translator-basic-dictionary-English.dict
@@ -3781,26 +3830,26 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count445
-LaTeX Font Info:    Try loading font information for U+bbold on input line 38.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/bbold/ubbold.fd)
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 38.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 26.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 38.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 26.
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OML+antt on input line 38.
+LaTeX Font Info:    Try loading font information for OML+antt on input line 26.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/antt/omlantt.fd
@@ -3815,8 +3864,8 @@ ile (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_vert.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_vert.png used on input line 38.
-(pdftex.def)             Requested size: 325.52399pt x 192.35709pt.
+_vert.png used on input line 26.
+(pdftex.def)             Requested size: 256.84406pt x 151.77258pt.
 
 <C:/Users/Blake/Documents/Education/Baylor/Logos/EngineeringLOGOweb.jpg, id=21,
  501.875pt x 270.00874pt>
@@ -3825,10 +3874,19 @@ aphic file (type jpg)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/EngineeringLOGOweb.jpg>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Engine
-eringLOGOweb.jpg used on input line 38.
-(pdftex.def)             Requested size: 325.52399pt x 175.14104pt.
-\openout7 = `pCT_Data_Organization_Format.mw'.
+eringLOGOweb.jpg used on input line 26.
+(pdftex.def)             Requested size: 256.84406pt x 138.18878pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+
+ []
+
+
+Overfull \hbox (3.83333pt too wide) in paragraph at lines 26--26
+ [] 
+ []
+
+\openout7 = `pCT_Data_Organization_Format.mw'.
 
 [0
 
@@ -3836,6 +3894,20 @@ eringLOGOweb.jpg used on input line 38.
 Users/Blake/Documents/Education/Baylor/Logos/Baylor_vert.png> <c:/Users/Blake/D
 ocuments/Education/Baylor/Logos/EngineeringLOGOweb.jpg>]
 (./pCT_Data_Organization_Format.mw)
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+
+ []
+
+
+Overfull \hbox (3.83333pt too wide) in paragraph at lines 29--29
+ [] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 31.
+
+(c:/texlive/2014/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 <C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png, id=29, 632
 .3625pt x 216.81pt>
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
@@ -3843,7 +3915,7 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 67.
+_IM_horz.png used on input line 44.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
@@ -3852,52 +3924,81 @@ _IM_horz.png used on input line 67.
 (./pCT_Data_Organization_Format.mw)
 
 
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 68.
 
-
-(c:/texlive/2014/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(c:/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(c:/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 90.
+_IM_horz.png used on input line 54.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [2] (./pCT_Data_Organization_Format.mw)
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 60--63
+ []
+ []
+
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
-
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 119.
+_IM_horz.png used on input line 84.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [3] (./pCT_Data_Organization_Format.mw)
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
-
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 142.
+_IM_horz.png used on input line 104.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [4] (./pCT_Data_Organization_Format.mw)
+Overfull \hbox (7.09984pt too wide) in paragraph at lines 108--109
+[]\OT1/lmr/bx/it/10 poly[]2[]6.bin []\OT1/lmr/m/n/10 : file con-tain-ing the ta
+b-u-lated MLP poly-no-mial val-ues with co-ef-fi-cients $\OMS/cmsy/m/n/10 f\OT1
+/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr/m/
+n/10 12\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 20\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 
+30\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 42\OMS/cmsy/m/n/10 g$ 
+ []
+
+
+Overfull \hbox (28.01088pt too wide) in paragraph at lines 109--110
+[]\OT1/lmr/bx/it/10 poly[]3[]12.bin []\OT1/lmr/m/n/10 : file con-tain-ing the t
+ab-u-lated MLP poly-no-mial val-ues with co-ef-fi-cients $\OMS/cmsy/m/n/10 f\OT
+1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 12\OML/cmm/m/it/10 ; \OT1/cmr/
+m/n/10 30\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 60\OML/cmm/m/it/10 ; \OT1/cmr/m/n/1
+0 105\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 168\OMS/cmsy/m/n/10 g$ 
+ []
+
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
-
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 182.
+_IM_horz.png used on input line 146.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
@@ -3908,7 +4009,7 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 219.
+_IM_horz.png used on input line 183.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
@@ -3919,29 +4020,46 @@ c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 278.
+_IM_horz.png used on input line 216.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [7] (./pCT_Data_Organization_Format.mw)
+Underfull \hbox (badness 10000) in paragraph at lines 238--238
+
+ []
+
+
+Overfull \hbox (3.83333pt too wide) in paragraph at lines 238--238
+ [] 
+ []
+
+
+Overfull \hbox (52.08862pt too wide) in paragraph at lines 243--244
+[]\OT1/lmr/bx/it/10 raw[]xxx.bin []\OT1/lmr/m/n/10 : bi-nary files con-tain-ing
+ trig-ger/-track-er/en-ergy de-tec-tor data from event builder as-so-ci-ated wi
+th gantry po-si-tion $[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10
+ ; []; []; [] \OMS/cmsy/m/n/10 g$\OT1/lmr/m/n/10 .[][] 
+ []
+
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
-
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 297.
+_IM_horz.png used on input line 248.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
 
 [8] (./pCT_Data_Organization_Format.mw)
+
 File: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png Graphi
 c file (type png)
 
 <use C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor_IM_horz.png>
 Package pdftex.def Info: C:/Users/Blake/Documents/Education/Baylor/Logos/Baylor
-_IM_horz.png used on input line 317.
+_IM_horz.png used on input line 267.
 (pdftex.def)             Requested size: 72.90831pt x 25.0pt.
 \openout7 = `pCT_Data_Organization_Format.mw'.
 
@@ -3960,22 +4078,22 @@ Package catoptions Warning: Undefined options
 (catoptions)                inputenc.sty,utf8,. 
 (catoptions)                Default action already taken in each case .
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
 (./pCT_Data_Organization_Format.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 328.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 328.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 53423 strings out of 493109
- 1077078 string characters out of 6138582
- 1431049 words of memory out of 5000000
- 55549 multiletter control sequences out of 15000+600000
+ 53910 strings out of 493109
+ 1082749 string characters out of 6138582
+ 1434869 words of memory out of 5000000
+ 56034 multiletter control sequences out of 15000+600000
  64996 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,16n,111p,10552b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{c:/texlive/2014/t
-exmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dv
+ 79i,15n,111p,10552b,2147s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2014/tex
+mf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{c:/texlive/2014/texmf-dist/fonts/enc/dv
 ips/antt/anttcap-cs.enc}<c:/texlive/2014/texmf-dist/fonts/type1/public/antt/ant
 tb.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/antt/anttm.pfb><c:/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2014/te
@@ -3988,10 +4106,10 @@ b><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/201
 type1/public/lm/lmri10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lm
 tt10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb>
-Output written on pCT_Data_Organization_Format.pdf (11 pages, 510658 bytes).
+Output written on pCT_Data_Organization_Format.pdf (11 pages, 515539 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
- 149 named destinations out of 1000 (max. 500000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
+ 145 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
