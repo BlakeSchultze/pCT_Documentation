@@ -1,0 +1,7 @@
+ preamble "\\begin{tcolorbox}[indexStyle]\\begin{theindex}"
+ postamble "\\end{theindex}\\end{tcolorbox}"
+ delim_0 "\\IndexDotfill "
+ delim_1 "\\IndexDotfill "
+ headings_flag 1
+ heading_prefix "  \\addtocounter{@glossary@entry@counter}{-1}\\IndexHeading{"
+ heading_suffix "}\n"

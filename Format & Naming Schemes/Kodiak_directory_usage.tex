@@ -1,0 +1,81 @@
+\Section{Kodiak Directory Descriptions and Usage}[Description of User/Shared Directories on Kodiak]
+%\begin{tcbsection}{Kodiak Directory Descriptions and Usage:}
+%	Description of User/Shared Directories on Kodiak
+%\end{tcbsection}
+\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{Kodiak}]
+%\vspace{6mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% /ion/... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep$\dots$)%<18.9cm><0.0cm>
+	$\boldsymbol{-}$ This directory is dedicated to the storage of all files associated with proton and ion therapy research.  There are private and shared subdirectories and to prevent inappropriate modifications/deletions of shared code/data, users only have write permissions to their private directories and they cannot directly add/modify shared data.  To share data with the collaboration, users submit the data to their private ``staging'' directory using the appropriate naming/organization and an administrator will then validate the data and move it to the appropriate shared directory.  Administrators typically will not be familiar with the naming/organizational scheme, but by organizing the data according to the full destination path, administrators can move the entire hierarchy of files/folders directly to \coloredtext*{documentation-constdir}{\dirsep ion}, thereby merging the contents of any existing directories automatically.\\[\tcbparskip]
+	
+\indent\indent The data in this directory is located on a network storage device and can be accessed from all Kodiak and Tardis cluster nodes.  The device is also backed up to tape drive periodically to prevent permanent loss of data in the event of drive failure.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/home/<username>/... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'%
+(title=\dirsep ion\dirsep home\dirsep\usernamelabel\dirsep$\dots$)
+$\boldsymbol{-}$ This is a user's private home directory where the files associated with their account are stored (e.g., \coloredtext*{documentation-file}{\texttt{.bash\_profile}}, \coloredtext*{documentation-file}{\texttt{.bash\_history}}, etc.) and is the default login directory.  Each user only has access to their personal directory, but because it is on the network storage device, it can be accessed from each of the Kodiak/Tardis nodes. Now that the home directories have been moved to \coloredtext*{documentation-constdir}{\dirsep ion}, they no longer have a limited storage capacity, so users may run code and write the resulting output data/images to this directory.  Note that as a subdirectory of \coloredtext*{documentation-constdir}{\dirsep ion}, the data in this directory will automatically be backed up to tape drive so it is recoverable in case of data corruption or drive failure.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% /data/<username>/... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep data\dirsep\usernamelabel\dirsep$\dots$)
+$\boldsymbol{-}$ These private data directories can be used as an alternative to \coloredtext*{documentation-dir}{\dirsep ion\dirsep home\dirsep\usernamelabel} for storing input data for code/program execution and as the destination for the resulting output data generated.  As subdirectories of \coloredtext*{documentation-constdir}{\dirsep data}, the contents of these directories are backed up periodically, so these can also be used for long term data storage.  
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/incoming/<username> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep incoming\dirsep\usernamelabel\dirsep$\dots$)
+$\boldsymbol{-}$ These private directories are used to upload data to the Baylor server prior to moving it to the intended destination.  When the uploaded data is intended to be shared with the collaboration, the directory should be used to rename and organize the data files according to the naming/organizational scheme before moving it to a user's private \coloredtext*{documentation-constdir}{\dirsep staging} directory, from which an administrator will validate and move the data to the appropriate shared directory.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/staging/<username> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep staging\dirsep\usernamelabel\dirsep$\dots$)
+$\boldsymbol{-}$ These directories are used to submit code/data for sharing with the collaboration.  Since administrators are typically unfamiliar with the naming/organizational scheme for shared data, users must first rename/organize the data as needed to create the entire hierarchy of directories corresponding to the full destination path, including all subdirectories below \coloredtext*{documentation-constdir}{\dirsep ion}.  Administrators need not know the destination path or understand the organization but can then simply move the entire hierarchy and the contents of existing directories such as \coloredtext*{documentation-constdir}{\dirsep ion} will automatically be merged and the new data/directories added.  To simplify the creation of these hierarchies and ensure consistency by removing manual naming/organization, bash scripts/functions have been developed to organize data and move it to a user's \coloredtext*{documentation-constdir}{\dirsep staging} directory by passing the requisite information as execution parameters (e.g., phantom, run date/\#/tag(s), etc.).\\[\tcbparskip]
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/pCT_data/... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep$\dots$)
+$\boldsymbol{-}$ This directory is where the raw, preprocessed, projection, and reconstruction data/images are moved to make them available to the other pCT users.  Each type of data is stored in separate subdirectories and soft links to this data are created and organized in a directory hierarchy indicating their input/output data dependencies.  The directory/file naming and organizational scheme for each type of data and the soft links are outlined in the next section of this document.  Data/images should only be moved to this shared directory after having been verified as valid/accurate and having been organized appropriately.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/pCT_data/pCT_Documentation %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep pCT\_Documentation\dirsep $\dots$)
+$\boldsymbol{-}$ Documentation relevant to pCT is stored in this directory, such as descriptions of the data format, coordinate system, and phantoms and pCT related publications (including student theses/dissertations).  This is a GitHub managed local repository allowing everyone to ``\coloredtext*{documentation-file}{\textit{push}}'' contributions to the repository and ``\coloredtext*{documentation-file}{\textit{pull}}'' updates/additions from others into their own local clone ensuring everyone has access to the latest information.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ion/pCT_code/... %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_code\dirsep $\dots$)
+$\boldsymbol{-}$ This directory is used to store permanent and semi-permanent pCT source code, from data acquisition to image reconstruction and analysis of reconstructed images.  It contains clones of GitHub repositories as well as user's personal versions of programs they want to make available to other users (otherwise users should keep their code in their private directories) organized by program type (Preprocessing/Reconstruction/etc.) with subdirectories for each user.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% ion/pCT_code/git/<GitHub account>/<GitHub repo>/... %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_code\dirsep git\dirsep $<$\emph{GitHub account}$>$\dirsep $<$\emph{GitHub repository}$>$\dirsep $\dots$)
+$\boldsymbol{-}$ This directory contains clones of the available pCT GitHub accounts and repositories, with parent directories for each GitHub account and subdirectories for each of their repositories.  Each program repository has a \coloredtext*{documentation-gitbranch}{master} branch, which typically corresponds to the current release version (though there may also be a branch like \coloredtext*{documentation-gitbranch}{release} used instead) and each of the program's developers will typically have their own branch which they can use to develop and test new ideas/features.  The group of developers of a program should decide amongst themselves what the process will be for approving merges with the \coloredtext*{documentation-gitbranch}{master/release} branch and when to release a new version of the program, which may include the results of several separate merges.\\[\tcbparskip]
+
+Users accessing the \coloredtext*{documentation-gitbranch}{master/release} branch of these clones should execute \tcbinlinebashbox!{git pull --rebase} prior to using the code to ensure it is updated to its latest version.\\[\tcbparskip]
+
+\textbf{\ul{NOTE}: This should not be done for other branches or the personal versions of code}.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% ion/pCT_code/<Preprocessing/Reconstruction>/<username>/... %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_code\dirsep user\_code\dirsep\usernamelabel\dirsep$\dots$)
+$\boldsymbol{-}$ Contains subdirectories for each pCT user where they can store and modify clones of the pCT program repositories and their personal code.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{tcbfunctionenv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\endinput

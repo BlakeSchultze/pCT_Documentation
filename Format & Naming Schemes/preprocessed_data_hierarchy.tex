@@ -1,0 +1,22 @@
+%\clearpage%
+\vspace{3mm}
+\Subsection{Preprocessed Data Hierarchy}
+\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{preprocessed\_data}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep preprocessed\_data)%[title=\dirsep ion\dirsep pCT\_data\dirsep preprocessed\_data\dirsep$\dots$]
+$\boldsymbol{-}$ directory containing the preprocessed experimental data organized by scan and processed dates
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+	\begin{deepList}[labelindent=1pt, leftmargin=*]
+	    \item \coloredtext*{documentation-dir}{\dirsep YY-MM-DD} : Folder containing all processed experimental data corresponding to the raw experimental data acquired on \coloredtext*{documentation-subcategory}{``\textit{YY-MM-DD}''}
+	    \begin{deepList}[labelindent=1pt, leftmargin=*]
+	        \item \coloredtext*{documentation-dir}{\dirsep YY-MM-DD} : Folder containing all processed experimental data generated on \coloredtext*{documentation-subcategory}{``\textit{YY-MM-DD}''} from the raw data
+	        \begin{deepList}[labelindent=1pt, leftmargin=*]
+	            \item \coloredtext*{documentation-fileset}{\textit{$<$Phantom$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}} : processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named \coloredtext*{documentation-subcategory}{``\textit{$<$Phantom$>$}''}, from run \# \coloredtext*{documentation-subcategory}{``\textit{XXXX[\_AAA]}''}, where \coloredtext*{documentation-subcategory}{``\textit{XXXX}''} is a 4 digit \# with leading zeros and \coloredtext*{documentation-subcategory}{``\textit{\_AAA}''} is an optional descriptor tag, and \coloredtext*{documentation-subcategory}{``\textit{xxx}''} is the gantry angle at which the data was acquired.
+	        \end{deepList}
+	    \end{deepList}
+	\end{deepList}
+\end{tcbparagraph}
+\end{tcbfunctionenv}
+\endinput

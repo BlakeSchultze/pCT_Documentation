@@ -1,0 +1,17 @@
+\nobreakspace {}\hfill \textbf {Page}\par
+\contentsline {Chapter}{\numberline {1}Directory Usage}{2}{section*.1}
+\contentsline {Section}{\numberline {1.1}Kodiak Directory Descriptions and Usage}{2}{section*.2}
+\contentsline {Section}{\numberline {1.2}Tardis Compute Node Directory Descriptions and Usage}{5}{section*.3}
+\contentsline {Chapter}{\numberline {2}Organizational Scheme}{7}{section*.4}
+\contentsline {Section}{\numberline {2.1}Code Organization}{7}{section*.5}
+\contentsline {Subsection}{\numberline {2.1}pCT Code Hierarchy}{7}{section*.6}
+\contentsline {Section}{\numberline {2.2}Data Organization}{8}{section*.7}
+\contentsline {Subsection}{\numberline {2.2}Organized Data Hierarchy}{8}{section*.8}
+\contentsline {Subsection}{\numberline {2.3}Raw Data Hierarchy}{14}{section*.9}
+\contentsline {Subsection}{\numberline {2.4}Preprocessed Data Hierarchy}{14}{section*.10}
+\contentsline {Subsection}{\numberline {2.5}Reconstruction Data Hierarchy}{15}{section*.11}
+\contentsline {Subsection}{\numberline {2.6}Unorganized User Data Hierarchy}{20}{section*.12}
+\contentsline {Chapter}{\numberline {3}GitHub Sources}{21}{section*.13}
+\contentsline {Section}{\numberline {3.1}GitHub Accounts/Repositories}{21}{section*.14}
+\contentsline {Chapter}{\numberline {4}Master File List}{23}{section*.15}
+\contentsfinish

@@ -1,0 +1,69 @@
+\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{Master File List}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep preprocessed\_data)%[title={}]
+%$\boldsymbol{-}$ Below is a master list of files and their descriptions in alphabetical order.
+%\end{tcbparagraph}
+\begin{tcbContentsBox}
+\anttmcap14pt Below is a master list of files and their descriptions in alphabetical order.
+\end{tcbContentsBox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+\begin{enumerate}
+	\item \fileentry[documentation-fileset]{$<$Phantom$>$\_XXXX[\_AAA]\_xxx.dat}{raw experimental data for the object named \coloredtext*{documentation-subcategory}{``\textit{$<$Phantom$>$}''}, from run \# \coloredtext*{documentation-subcategory}{``\textit{XXXX[\_AAA]}''}, where \coloredtext*{documentation-subcategory}{``\textit{XXXX}''} is a 4 digit \# with leading zeros and \coloredtext*{documentation-subcategory}{``\textit{\_AAA}''} is an optional descriptor tag, and \coloredtext*{documentation-subcategory}{``\textit{xxx}''} is the gantry angle at which the data was acquired.}
+	\item \fileentry[documentation-fileset]{$<$Phantom$>$\_XXXX[\_AAA]\_xxx.dat.root.reco.root.bin}{processed experimental data with tracker coordinates, recovery of missing hits when possible, and calibrated WEPL measurements for the object named \coloredtext*{documentation-subcategory}{``\textit{$<$Phantom$>$}''}, from run \# \coloredtext*{documentation-subcategory}{``\textit{XXXX[\_AAA]}''}, where \coloredtext*{documentation-subcategory}{``\textit{XXXX}''} is a 4 digit \# with leading zeros and \coloredtext*{documentation-subcategory}{``\textit{\_AAA}''} is an optional descriptor tag, and \coloredtext*{documentation-subcategory}{``\textit{xxx}''} is the gantry angle at which the data was acquired.}
+	\item \fileentry{bin\_counts.txt}{linearized bin \# for each proton history, where linearized \coloredtext*{MidnightBlue}{bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS}.}
+	\item \fileentry{calib.txt}{text file containing calibration curve coefficients for WEPL calibration.}
+	\item \fileentry{coefficient.bin}{file containing the tabulated scattering coefficient values for $\Sigma_1$/$\Sigma_2$ for $u_2-u_1$/$u_1$ values}
+	\item \fileentry{cos\_table.bin}{file containing the tabulated values of cosine function}
+	\item \fileentry{execution\_log.csv}{The same information listed in the 		\coloredtext*{documentation-file}{\textit{execution\_log.txt}} files for each execution are also stored in this global comma separated value (.csv) file with the execution information organized into separate columns and each row corresponding to a different reconstruction, thereby maintaining a single file where the execution information for all previous reconstructions can be found in the same place.  Upon execution of a new reconstruction, a new row entry is added for storage of the corresponding execution information.}
+	\item \fileentry{execution\_log.txt}{Listing of the preprocessing/reconstruction options/parameters used for a particular reconstruction along with the execution times for various individual tasks and portions of preprocessing and/or reconstruction and total program execution time organized as a series of \coloredtext*{documentation-subcategory}{``key=value''} entries in a text file in the directory with the corresponding results.}
+	\item \fileentry{FBP.txt}{text file specifying filtered back projection image with the xy plane of each slice stacked on each other.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \fileentry{FBP.png}{``\coloredtext*{documentation-file}{\textit{FBP.txt}}'' converted to PNG image.}
+	\item \fileentry{FBP\_hull.txt}{text file specifying object hull generated from the filtered back projection image by setting all voxels with RSP less than a user definable threshold (typically 0.6) with the xy plane of each slice stacked on each other.}
+	\item \fileentry{FBP\_hull.png}{``\coloredtext*{documentation-file}{\textit{FBP\_txt.png}}'' converted to PNG image}
+	\item \fileentry{FBP\_med\_filtered.txt}{text file specifying the result of applying a median filter to the filtered back projection image with the xy plane for each slice stacked on each other.}
+	\item \fileentry{FBP\_med\_filtered.png}{``\coloredtext*{documentation-file}{\textit{FBP.txt}}'' converted to PNG image.}
+	\item \fileentry{FBP\_avg\_filtered.txt}{text file specifying the result of applying an average filter to the filtered back projection image with the xy plane for each slice stacked on each other.}
+	\item \fileentry{FBP\_avg\_filtered.txt}{``\coloredtext*{documentation-file}{\textit{FBP\_avg\_filtered.txt}}'' converted to PNG image.}
+	\item \fileentry{histories.bin}{binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.}	
+	\item \fileentry{hull.txt}{text file specifying hull in 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{hull.png}{``\coloredtext*{documentation-file}{\textit{hull.txt}}'' converted to PNG image.}
+	\item \fileentry{hull\_avg\_filtered.txt}{text file specifying hull after applying an average filter and applying a threshold to the result so that all voxels with value less than some threshold (typically 0.01-0.1) are set to 0, thereby restoring image to 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{mean\_rel\_ut\_angle.txt}{mean relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}
+	\item \fileentry{mean\_rel\_uv\_angle.txt}{mean relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.}
+	\item \fileentry{mean\_WEPL.txt}{mean WEPL value by linearized bin \#.}
+	\item \fileentry{MLP.bin}{binary file with MLP path data for each history entering hull.}
+	\item \fileentry{MSC\_counts.txt}{text file specifying Modified Space/Silhouette Carving generated image of integer values indicating the \# of times each voxel was identified as lying outside the object with the xy plane of each slice stacked on each other.}
+	\item \fileentry{MSC\_hull.txt}{text file specifying Modified Space/Silhouette Carving generated hull in 1s/0s with the xy plane of each slice stacked on each other.}
+	\item \fileentry{poly\_1\_2.bin}{file containing the tabulated MLP polynomial values with coefficients $\{1,2,3,4,5,6\}$}
+	\item \fileentry{poly\_2\_3.bin}{file containing the tabulated MLP polynomial values with coefficients $\{2,3,4,5,6,7\}$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   		\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \fileentry{poly\_3\_4.bin}{file containing the tabulated MLP polynomial values with coefficients $\{3,4,5,6,7,8\}$}
+	\item \fileentry{poly\_2\_6.bin}{file containing the tabulated MLP polynomial values with coefficients $\{2,6,12,20,30,42\}$}
+	\item \fileentry{poly\_3\_12.bin}{file containing the tabulated MLP polynomial values with coefficients $\{3,12,30,60,105,168\}$}
+	\item \fileentry[documentation-fileset]{projection\_xxx.bin}{binary files containing tracker coordinates and WEPL data associated with gantry position $\coloredtext*{documentation-subcategory}{``\textit{xxx}''} =\{\coloredtext*{documentation-subcategory}{``\textit{001}''}, \coloredtext*{documentation-subcategory}{``\textit{002}''}, \coloredtext*{documentation-subcategory}{``\textit{003}''}, \cdots\}$ converted from raw data using WEPL calibration routine and used as input to image reconstruction.}
+	\item \fileentry[documentation-fileset]{raw\_xxx.bin}{binary files containing trigger/tracker/energy detector data from event builder associated with gantry position $\coloredtext*{documentation-subcategory}{``\textit{xxx}''} =\{\coloredtext*{documentation-subcategory}{``\textit{001}''}, \coloredtext*{documentation-subcategory}{``\textit{002}''}, \coloredtext*{documentation-subcategory}{``\textit{003}''}, \cdots\}$.}
+	\item \fileentry{settings\_log.cfg}{copy of \coloredtext*{documentation-subcategory}{``\textit{settings.cfg}''} with any changes made to parameters/options applied at execution, if any.}
+	\item \fileentry{sinogram.txt}{mean WEPL after statistical cuts with the $t_{bin}$ and angular bin $\theta_{bin}$ plane for each vertical bin $v_{bin}$ stacked on each other.}
+	\item \fileentry{sin\_table.bin}{file containing the tabulated values of sine function}
+	\item \fileentry{stddev\_rel\_ut\_angle.txt}{standard deviation of the relative ut angle ($\angle ut_{out} -\angle ut_{in}$) by linearized bin \#.}
+	\item \fileentry{stddev\_rel\_uv\_angle.txt}{standard deviation of the relative uv angle ($\angle uv_{out} -\angle uv_{in}$) by linearized bin \#.}
+	\item \fileentry{stddev\_WEPL.txt}{standard deviation of the WEPL value by linearized bin \#.}
+	\item \fileentry{TVcalib.txt}{text file containing calibration curve coefficients for TV corrected WEPL calibration.}
+	\item \fileentry{TV\_measurements.txt}{text file containing total variation (TV) measurements before/after each iteration.}
+	\item \fileentry{x\_0.txt}{text file specifying voxel values of initial iterate with the xy plane of each slice stacked on each other.}
+	\item \fileentry{x\_0.png}{``\coloredtext*{documentation-file}{\textit{x\_0.txt}}'' converted to PNG image.}
+%	\item \fileentry[documentation-fileset]{x\_k.dcm}{DICOM images of x after $k$ iterations.}
+	\item \fileentry[documentation-fileset]{x\_k.txt}{text images of x after $k$ iterations.}
+	\item \fileentry[documentation-fileset]{x\_k.png}{PNG images of x after $k$ iterations.}
+	\item \fileentry{WEPL.bin}{binary file specifying WEPL value for each history entering hull.}	
+\end{enumerate}
+\end{tcbparagraph}
+%\par\bigskip\bigskip\bigskip\medskip
+\end{tcbfunctionenv}
+\endinput

@@ -1,7 +1,0 @@
- preamble "\\begin{tcolorbox}[title={\\anttmcap18pt Index}, colframe=blue!25!black, before=\\par\\smallskip, after=\\par, after skip=1mm, boxsep=2mm, top=1mm, left=2mm, colback=blue!5!yellow!10!, fonttitle=\\Large\\bfseries, toptitle=0mm, bottomtitle=0mm, boxrule=3pt, colbacktitle=black!50!white, coltitle=white, left skip=0mm]\\begin{theindex}"
- postamble "\\end{theindex}\\end{tcolorbox}"
- delim_0 "\\IndexDotfill "
- delim_1 "\\IndexDotfill "
- headings_flag 1
- heading_prefix "  \\addtocounter{@glossary@entry@counter}{-1}\\IndexHeading{"
- heading_suffix "}\n"

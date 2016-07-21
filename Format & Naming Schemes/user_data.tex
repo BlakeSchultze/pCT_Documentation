@@ -1,0 +1,21 @@
+%\clearpage%
+%\vspace{7mm}%
+\par\bigskip\bigskip\bigskip
+\Subsection{Unorganized User Data Hierarchy}
+\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{user\_data}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep user\_data)%[title=\dirsep local\dirsep user\_data\dirsep$\dots$]
+$\boldsymbol{-}$ directory containing unorganized input and output reconstruction data, allowing users to use and keep their unorganized data separate from other data and maintain it in their preferred organizational scheme without it interfering with the properly organized data.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+\begin{deepList}[labelindent=1pt, leftmargin=*]
+    \item \coloredtext*{documentation-constdir}{\dirsep user\_data} : directory unique to Tardis compute nodes containing subdirectories for each user where they can transfer unorganized data they want to reconstruct and write the corresponding output reconstruction data/images
+    \begin{deepList}[labelindent=1pt, leftmargin=*]
+		\item \coloredtext*{documentation-dir}{\dirsep $<$username$>$} : subdirectories for each pCT user for the unorganized input and output reconstruction data
+	\end{deepList}
+\end{deepList}
+\end{tcbparagraph}
+\end{tcbfunctionenv}
+\endinput
+%\clearpage 

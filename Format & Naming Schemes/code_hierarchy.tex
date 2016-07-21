@@ -1,0 +1,31 @@
+%\clearpage%
+\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{pCT\_code}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion/local\dirsep pCT\_code\dirsep$\dots$)
+$\boldsymbol{-}$ directory containing pCT code on Kodiak and Tardis compute nodes, both of which have the same organizational scheme, the only difference being the top level parent directory on Kodiak is \coloredtext*{documentation-constdir}{\dirsep ion} and on the Tardis compute nodes is \coloredtext*{documentation-constdir}{\dirsep local}.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+\begin{deepList}[labelindent=1pt, leftmargin=*]
+	\item \coloredtext*{documentation-constdir}{\dirsep ion} or \coloredtext*{documentation-constdir}{\dirsep local} : parent directory for all pCT code/data on Kodiak and the Tardis compute nodes
+    	\begin{deepList}[labelindent=1pt, leftmargin=*]
+        	\item \coloredtext*{documentation-constdir}{\dirsep pCT\_code} : directory containing the code for all pCT programs linked to their GitHub repositories as well as subdirectories for each pCT user where they can clone and modify these repositories and store/execute their own code
+	    	\begin{deepList}[labelindent=1pt, leftmargin=*]
+	        	\item \coloredtext*{documentation-constdir}{\dirsep git} : directory containing clones of the standard/common pCT programs, providing easy and immediate access to the newest version of each of these programs
+	    		\begin{deepList}[labelindent=1pt, leftmargin=*]
+	        		\item \coloredtext*{documentation-dir}{\dirsep $<$GitHub account$>$} : directories for each of the GitHub accounts containing one or more pCT programs
+				\begin{deepList}[labelindent=1pt, leftmargin=*]
+	        			\item \coloredtext*{documentation-dir}{\dirsep $<$GitHub repository$>$} : subdirectories for each pCT code repository in the associated GitHub account
+	    			\end{deepList}
+	    		\end{deepList}
+			\item \coloredtext*{documentation-constdir}{\dirsep user\_code} : directory containing subdirectories for each user where they can store their personal code
+	    		\begin{deepList}[labelindent=1pt, leftmargin=*]
+	        		\item \coloredtext*{documentation-dir}{\dirsep $<$username$>$} : subdirectories for each pCT user where they can store their personal code
+	    		\end{deepList}
+		\end{deepList}			
+    	\end{deepList}
+\end{deepList}
+\end{tcbparagraph}
+\end{tcbfunctionenv}
+
+%\clearpage 

@@ -3,7 +3,7 @@ keyword    "\\nomenclatureentry"
 %% Germans might want to change this and delete the two %%
 %% quote '"'
 %% ---- for output file ----
-preamble   "\\begin{tcolorbox}[reset, @DEFAULT@STYLE, title={\\anttmcap18pt\\nomname}, colframe=blue!25!black, before=\\par\\smallskip, after=\\par\\smallskip, boxsep=2mm, top=1mm, left=2mm, colback=blue!5!yellow!10!, fonttitle=\\Large\\bfseries, toptitle=0mm, bottomtitle=0mm, boxrule=3pt, colbacktitle=black!50!white, coltitle=white, left skip=0mm]\\begin{thenomenclature} \n"%
+preamble   "\\begin{tcolorbox}[nomenclatureStyle]\\begin{thenomenclature} \n"%
 postamble  "\n\n\\end{thenomenclature}\\end{tcolorbox}\n" group_skip "\n"
 %preamble   "\\begin{thenomenclature} \n"%
 %postamble  "\n\n\\end{thenomenclature}\n" group_skip "\n"
