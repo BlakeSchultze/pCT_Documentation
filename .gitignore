@@ -1,0 +1,114 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+###################################################################################
+################ User defined files/folders to ignore in commits ##################
+###################################################################################
+#Exceptions
+!pct.bbl
+!pct.blg
+
+# Folders
+\nppBackup
+\_minted-*
+
+# Text files
+*.bak
+*.hidden
+*.notes
+*.tmp
+*.txt.bak
+
+# Matlab files
+#*.m
+*.mat
+*.asv
+*.m~
+*.mex*
+
+# Mac IDE files             
+*.swp               
+*~              
+*(Autosaved).rtfd/              
+Backup[ ]of[ ]*.pages/              
+Backup[ ]of[ ]*.key/                
+Backup[ ]of[ ]*.numbers/                
+
+# Mac finder files and hidden folders               
+.DS_Store
+
+######################## Visual Studio Files/Folders ###########################
+# VS Folders and Specific Files
+\ipch
+\Release
+\x64
+\x64\src
+\x64\Release
+16
+64
+#PLOP
+Project_VC++Directories_root.txt
+vc100.pdb
+vc110.pdb
+usertype.dat
+
+# VS File Types
+*.Build.CppClean.log
+*.command.1.tlog
+*.cpp1.ii
+*.cpp2.i
+*.cpp3.i
+*.cpp4.ii
+*.cu.cache
+*.cu.cpp.ii
+*.cu.deps
+*.cu.obj
+*.cudafe1.c
+*.cudafe1.cpp
+*.cudafe1.gpu
+*.cudafe1.stub.c
+*.cudafe2.c
+*.cudafe2.cpp
+*.cudafe2.gpu
+*.cudafe2.stub.c
+*.exe
+*.exe.intermediate.manifest
+*.fatbin
+*.fatbin.c
+*.hash
+*.ilk
+*.ipch
+*.lastbuildstate
+*.log
+*.module_id
+*.opensdf
+*.pdb
+*.ptx
+*.read.1.tlog
+*.sdf
+*.sln
+*.sm_10.cubin
+*.sm_20.cubin
+*.sm_21.cubin
+*.sm_30.cubin
+*.sm_35.cubin
+*.suo
+*.unsuccessfulbuild
+*.v10.suo
+*.v11.suo
+*.vcxproj
+*.vcxproj.user
+*.vcxprojResolveAssemblyReference.cache
+*.vssettings
+*.write.1.tlog
