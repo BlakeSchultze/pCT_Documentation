@@ -1,20 +1,20 @@
-\clearpage%
-%\vspace{7mm}%
-\Subsection{Raw Data Hierarchy}
-\begin{tcbfunctionenv}'tcbBlueStyle'[title=\shadowText{raw\_data}]
+%\clearpage%
+\par\bigskip\smallskip%
+\Subsection*{Raw Data Hierarchy}
+\begin{tcbenvironment}'tcbBlueStyle'[title=\shadowText{raw\_data}]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep raw\_data)%[title=\dirsep ion\dirsep pCT\_data\dirsep raw\_data\dirsep$\dots$]
-$\boldsymbol{-}$ directory where new raw experimental data files for all objects scanned on a particular scan date prior to creation of soft links renamed to ``\coloredtext*{documentation-fileset}{\textit{projection\_xxx.bin}}'' and organized according to the naming/organizational scheme.
+$\boldsymbol{-}$ directory where all raw experimental data files from a particular scan are stored in separate directories according to the scan date prior to creation of soft symbolic links named \docentry![fileset]{projection\_xxx.bin} and organized according to the naming/organizational scheme.
 \end{tcbparagraph}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
-\begin{deepList}[labelindent=1pt, leftmargin=*]
-    \item \coloredtext*{documentation-dir}{\dirsep YY-MM-DD} : Folder containing all raw experimental data acquired from the scan beginning on \coloredtext*{documentation-subcategory}{``\textit{YY-MM-DD}''}
-    \begin{deepList}[labelindent=1pt, leftmargin=*]
-        \item \coloredtext*{documentation-fileset}{\textit{$<$Phantom$>$\_XXXX[\_AAA]\_xxx.dat}} : raw experimental data for the object named \coloredtext*{documentation-subcategory}{``\textit{$<$Phantom$>$}''}, from run \# \coloredtext*{documentation-subcategory}{``\textit{XXXX[\_AAA]}''}, where \coloredtext*{documentation-subcategory}{``\textit{XXXX}''} is a 4 digit \# with leading zeros and \coloredtext*{documentation-subcategory}{``\textit{\_AAA}''} is an optional descriptor tag, and \coloredtext*{documentation-subcategory}{``\textit{xxx}''} is the gantry angle at which the data was acquired.
-    \end{deepList}
-\end{deepList}
+\begin{ThinEnum}[labelindent=1pt, leftmargin=*]
+    \item \docentry[dir]{YY-MM-DD} : Folder containing all raw experimental data acquired from the scan beginning on \docentry![subcategory]{YY-MM-DD}
+    \begin{ThinEnum}[labelindent=1pt, leftmargin=*]
+        \item \docentry[fileset]{$<$Phantom$>$\_XXXX[\_AAA]\_xxx.dat} : raw experimental data for the object named \docentry![subcategory]{$<$Phantom$>$}, from run \# \docentry![subcategory]{XXXX[\_AAA]}, where \docentry![subcategory]{XXXX} is a 4 digit \# with leading zeros and \docentry![subcategory]{\_AAA} is an optional descriptor tag, and \docentry![subcategory]{xxx} is the gantry angle at which the data was acquired.
+    \end{ThinEnum}
+\end{ThinEnum}
 \end{tcbparagraph}
-\end{tcbfunctionenv}
+\end{tcbenvironment}
 \endinput
 %\clearpage 

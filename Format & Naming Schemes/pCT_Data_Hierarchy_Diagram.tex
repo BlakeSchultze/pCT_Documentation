@@ -1,99 +1,60 @@
-\documentclass[landscape,a4]{article}
-%\usepackage{mymacros}
-\usepackage{my-latex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Create Title Page With Graphics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\tikzset{fontscale/.style = {font=\relsize{#1}}
-    }
-    \begin{tikzpicture}[
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-D/.style={
-% The shape:
-rectangle,
-% The size:
-minimum size=1pt,
-% The border:
-very thick,
-draw=green!50!black!50, % 50% red and 50% black,
-% and that mixed with 50% white
-% The filling:
-top color=white, % a shading that is white at the top...
-bottom color=green!50!black!20, % and something else at the bottom
-% Font
-font=\itshape\tiny
-},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-F/.style={
-% The shape:
-rectangle,
-rounded corners=5pt,
-% The size:
-minimum size=1mm,
-% The border:
-very thick,
-draw=green!50!black!50, % 50% red and 50% black,
-% and that mixed with 50% white
-% The filling:
-top color=white, % a shading that is white at the top...
-bottom color=blue!50!black!20, % and something else at the bottom
-% Font
-font=\itshape\tiny
-},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-end/.style={
-% The shape:
-rectangle,
-rounded corners=5pt,
-% The size:
-minimum size=4mm,
-% The border:
-very thick,
-draw=green!50!black!50, % 50% red and 50% black,
-% and that mixed with 50% white
-% The filling:
-top color=white, % a shading that is white at the top...
-bottom color=red!50!black!20, % and something else at the bottom
-% Font
-font=\itshape\tiny
-},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-,>=stealth',thick,black!50,text=black,
-every new ->/.style={shorten >=0pt},
-graphs/every graph/.style={edges=rounded corners},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-pt/.style={draw,inner sep=0pt,minimum size=0.3pt,fill=black!50},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}}]
-\matrix[row sep=3mm,column sep=1mm]
-{\tiny
-                           &&&&&&&\node(013)[D]{pCT Data};    &&&&&&                       &&\\[0mm]
-                           &&\node(20)[pt]{};                 &&&&&&&\node(213)[pt]{};     &&&&&&\node (23)[pt]{};            &&\\
-                           &\node(30)[D]{Experimental};       &&&&&&&                      &&&&&&\node(33)[D]{Simulated};   &&\\
-                           &\node(40)[D]{YY-MM-DD(Run Date)}; &&&&&&&                      &&&&&&&&\\[-1mm]
-                           &\node(50)[D]{XXXX[\_AAA](Run\#)}; &&&&&&&                      &&&&&&&&\\
-\node(60)[D]{Input};       &&\node(50)[D]{Output};            &&&&&&&                      &&&&&&&&\\
-\node(60)[F]{raw\_xxx.bin};&&\node(50)[D]{YY-MM-DD};          &&&&&&&                      &&&&&&&&\\
-&\node(60)[F]{Calib.txt};  &\node(50)[F]{projection\_xxx.bin};&\node(613)[F]{settings.cfg};&\node(613)[D]{Reconstruction};&&&&&&&&\\
-&                          &                                  &                            & \node(613)[D]{YY-MM-DD};  &&&&&&&&&\\
-&\node(50)[F]{hull.txt};   &\node(613)[F]{FBP.txt};           &\node(613)[F]{x\_0.txt};    &\node(613)[F]{MLP.bin};    &\node(613)[F]{histories.bin};&\node(50)[D]{Images};&&&&&&&\\
-&                          &                                  &                            &                           &                            & \node(613)[D]{YY-MM-DD}; &&&&&;            &&\\
-&                          &                                  &                            &                           & \node(613)[F]{DICOM};   & \node(613)[F]{TEXT}; &\node(613)[F]{PNG};&&&&;            &&\\
+\clearpage%
+\Section{organized\_data Hierarchy Diagram}[the diagram below shows the hierarchy of \docentry[constdir]{organized\_data} directories where the vertical ellipses (\,$\vdots$\,) indicate the subdirectories of the experimental and simulated data scan date directories are identical.]
+\centering%
+%\newgeometry{left=1.25in,top=1.0in,bottom=-2in, paperwidth=4.3in,paperheight=4.4in,centering}
+%top color=blue!2!white, middle color=blue!6!white, bottom color=blue!13!white
+\begin{tikzpicture}[scale=4, framed,background rectangle/.style={double, ultra thick, draw=stdblue, double=cyan, top color=stdblue!1!white, rounded corners=20pt}]
+\matrix[row sep=4mm,column sep=1mm]
+{%
+	&&&\node(parentdot)[pt]{};&&&&\\
+	&&&\node(parentdir)[D]{ion};&&&&\\
+	&&&\node(pctdata)[D]{pCT\_data};&&&&\\
+	&&&\node(organizeddata)[D]{organized\_data};&&&&\\
+	&\node(top1)[pt]{};&&\node(top3)[pt]{};&\node(top4)[pt]{};&&&\\
+	&\node(001)[D]{Experimental};    &&&\node(004)[D]{Simulated};&\\[-2mm]
+	&\node(01)[pt]{};&&\node(03)[pt]{};&\node(04)[pt]{};&\node(05)[pt]{};&&\\
+	&\node(11)[D]{YY-MM-DD};        &&\node(13)[D]{G\_YY-MM-DD};&&\node(15)[D]{T\_YY-MM-DD};\\[1mm]
+	&&&\node(0023)[textonly]{$\vdots$};&&\node(0025)[textonly]{$\vdots$};&&\\[-13mm]
+	%&&&&&\\[-5mm]
+	&\node(21)[D]{XXXX[\_AAA]};     &&\node(23)[textonly]{};&&\node(25)[textonly]{};\\[0mm]
+	\node(30)[pt]{};&\node(31)[pt]{}; & \node(32)[pt]{};&&&\\
+	\node(40)[D]{Input};       &&\node(42)[D]{Output};       &&&&\\
+	\node(50)[F]{raw\_xxx.bin};&&\node(52)[D]{YY-MM-DD};     &&&&\\[-2mm]
+	&\node(61)[pt]{};          &\node(62)[pt]{};    &\node(63)[pt]{};&\node(64)[pt]{};&\node(65)[pt]{};\\
+	&\node(71)[F]{Wcalib.txt}; &\node(72)[D]{Reconstruction}; &\node(73)[F]{TVcorr.txt};   &\node(74)[F]{WcalibTemp.txt};&\node(75)[F]{projection\_xxx.bin};&&&&&&&&\\[-2mm]
+	&				   &\node(82)[pt]{};&\node(83)[pt]{};&\\
+	&                          &\node(92)[D]{YY-MM-DD};       &\node(93)[F]{settings.cfg};&&&&&&&&&&\\[-2mm]
+	\node(100)[pt]{};&\node(101)[pt]{};&\node(102)[pt]{};    &\node(103)[pt]{};&\node(104)[pt]{};&\node(105)[pt]{};\\
+	\node(110)[F]{hull.txt};&\node(111)[F]{FBP.txt};&\node(112)[D]{Images};&\node(113)[F]{x\_0.txt};&\node(114)[F]{TV\_measurements.txt};&\node(115)[F]{execution\_log.txt};
+	&&&&&&&&\\
+	&& \node(122)[D]{YY-MM-DD};\\[-2mm]
+	&\node(131)[pt]{};&\node(132)[pt]{};&\node(133)[pt]{};&&\\
+	&\node(141)[F]{x\_k.dcm};&\node(142)[F]{x\_k.txt};&\node(143)[F]{x\_k.png};&&&&&&&&&&\\
 };
-%\matrix[row sep=5mm,column sep=1mm]
-%{
-%    \node (t) [task] {Established Tasks};\\
-%    \node (d) [development] {Newly ProposedIn Development};\\
-%    \node (r) [remove] {Potentially Replace};
-%};
 \graph [use existing nodes, edge label]
 {
+	(parentdot)->(parentdir)->(pctdata)->(organizeddata)--(top3)--(top1)->(001)--(01)->(11)->(21)--(31)--(30)->(40)->(50);
+	(top3)--(top4)->(004)--(04)--(05)->(15)->(25);
+	(04)--(03)->(13)->(23);
+	(31)--(32)->(42)->(52)--(62)->(72)--(82)->(92)--(102)->(112)->(122)--(132)->(142);
+	(61)--(62)--(63)--(64)--(65);
+	(61)->(71);
+	(62)->(72);
+	(63)->(73);
+	(64)->(74);
+	(65)->(75);
+	(82)--(83)->(93);
+	(100)--(101)--(102)--(103)--(104)--(105);
+	(100)->(110);
+	(101)->(111);
+	(102)->(112);
+	(103)->(113);
+	(104)->(114);
+	(105)->(115);
+	(131)--(132)--(133);
+	(131)->(141);
+	(132)->(142);
+	(133)->(143)
 };
-
 \end{tikzpicture}
-
-\end{document} 
+\endinput

@@ -1,0 +1,48 @@
+%\newgeometry{left=1.25in,top=1.0in,bottom=-2in, paperwidth=4.3in,paperheight=4.4in,centering}
+%top color=blue!2!white, middle color=blue!6!white, bottom color=blue!13!white
+%\clearpage%
+\Section{pCT\_code Hierarchy Diagram}[the diagram below shows the hierarchy of \docentry[constdir]{pCT\_code} directories including those containing clones of the GitHub accounts/repositories relevant to pCT.]%
+\centering%
+\begin{tikzpicture}[scale=4, font=\small,framed,background rectangle/.style={double, ultra thick, draw=stdblue, double=cyan, top color=stdblue!1!white, rounded corners=20pt}]
+\matrix[row sep=4mm,column sep=2mm]
+{%
+&\node(parentdot)[pt]{};\\
+&\node(01)[D]{ion};\\
+&\node(11)[D]{pCT\_code};\\
+\node(20)[pt]{};&\node(21)[pt]{};&&\node(23)[pt]{};\\
+\node(30)[D]{user\_code};    &&&\node(33)[D]{git};\\[0mm]
+%\node(01)[pt]{};&\node(top3)[pt]{};&\node(03)[pt]{};&&&\node(04)[pt]{};&&&\node(05)[pt]{};\\
+\node(40)[D]{$<$username$>$};&\node(41)[pt]{};&\node(42)[pt]{};&\node(43)[pt]{};&&\node(45)[pt]{};\\
+&\node(51)[D]{BlakeSchultze};&\node(52)[D]{BaylorICTHUS};&&&\node(55)[D]{pCT-collaboration};\\[1mm]
+\node(60)[pt]{};&\node(61)[pt]{};&\node(62)[F]{pCT\_Reconstruction};&\node(63)[pt]{};&\node(64)[pt]{};&\node(65)[pt]{};&\node(66)[pt]{};&\node(67)[pt]{};\\[1mm]
+\node(70)[F]{pCT\_Reconstruction};&\node(71)[F]{pCT\_Documentation};&&\node(73)[F]{pCT-docs};&\node(74)[F]{pCT\_Tools};&\node(75)[F]{Reconstruction\_BU};&\node(76)[F]{pct-recon-copy};&\node(77)[F]{Preprocessing};\\[1mm]
+};
+%\path[every node/.style={font=\sffamily\small}]
+%       (parentdot) edge node (01)
+%       (01) edge node {} (11)
+%       (11) edge node {} (21)
+%       (21) edge node {} (20)
+%       (20) edge node {} (30)
+%       (30) edge node {} (40);%
+%%       (B) 	edge [loop left] node {0.0} (B)
+%%           	edge [bend right] node [right] {0.0} (D)
+%%           	edge [bend right] node[below] {0.0} (C)
+%%       (C) 	edge [bend right] node [right] {0.0} (A)
+%%           	edge [bend right] node [above] {0.0} (B)
+%%           	edge [bend left] node [left] {0.0} (D)
+%%           	edge [right] node [above] {0.0} (E)
+%%       (D) 	edge [loop below] node {0.0} (D);
+\graph [use existing nodes, edge label]
+{
+(parentdot)->(01)->(11)->(21)--(20)->(30)->(40);
+(21)--(23)->(33)--(43)--(42)--(41)->(51)--(61)--(60)->(70);
+(43)--(45)->(55)--(65)--(63)--(67)->(77);
+(42)->(52)->(62);
+(61)->(71);
+(63)->(73);
+(64)->(74);
+(65)->(75);
+(66)->(76);
+};
+\end{tikzpicture}
+\endinput 

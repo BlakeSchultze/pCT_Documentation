@@ -1,0 +1,286 @@
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#--------------------- Folders and user types/files --------------------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+# Folders
+\_minted-*
+*.listing
+*.probs
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#----------------- Core TeX documents and auxiliary files --------------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+# MODE=AUX
+*.aux
+*.lof
+*.lot
+*.toc
+# MODE=STY
+*.clo
+*.cls
+*.def
+*.fd
+*.sty
+# MODE=BibTeX/biblatex/biber/bibref
+*.bcf
+*.bdx
+*.bib
+*.bbl
+*.blg
+*-blx.aux
+*-blx.bib
+*.bnd
+*.brf
+*.run.xml
+# MODE=BST
+*.bst
+# MODE=TeX (uniquely TeX mode only)
+*.ltx
+*.texi
+# MODE=MetaFont
+*.mf
+# MODE=MetaPost
+*.mp
+*.mpx
+# MODE=EDT
+*.edt
+# MODE=DTX
+*.dtx
+*.fdd
+# MODE=INS
+*.ins
+*.drv
+
+## Additional auxiliary files:
+*.afm
+*.cfg
+*.dep
+*.dfu
+*.enc
+*.etx
+*.fls
+*.fot
+*.gf
+*.ldf
+*.map
+*.mtx
+*.pfb
+*.pk
+*.pl
+*.soc
+*.spl
+*.tfm
+*.tmb
+*.top               
+*.ttf
+*.tuc             
+*.tui               
+*.vf
+*.vpl
+*.xcp
+*.xref
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#-------------- Editor, intermediate, and temporary files --------------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+## Intermediate/output documents:
+*.dvi
+*-converted-to.*
+# *.ps
+# *.eps
+# *.pdf
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.log
+*.msg
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Temp files
+*.bak
+*.sav
+*.txt.bak
+*.tex.sav
+*.tmp   
+
+# Subversion version control
+*.svn
+*.svt
+*.svx            
+
+# ConTeXt
+*.cld
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#-------- Auxiliary and intermediate files from other packages ---------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+## Auxiliary and intermediate files from other packages:
+# algorithms
+*.alg
+*.loa
+
+# achemso
+acs-*.bib
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# changebar
+*.cb
+*.cb2
+
+# cprotect
+*.cpt
+
+# fixme
+*.lox
+
+#(r)(e)ledmac/(r)(e)ledpar
+*.end
+*.?end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# gnuplottex
+*-gnuplottex-*
+
+# hypdoc
+*.hd
+
+# hyperref
+*.brf
+*.idv
+*.lg
+*.out
+*.url
+
+# knitr
+*-concordance.tex
+# TODO Comment the next line if you want to keep your tikz graphics files
+*.tikz
+*-tikzDictionary
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+*.mst
+
+# minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc
+*.mtc1
+*.mtc[0-9]
+*.mtc[1-9][0-9]
+
+# minted
+_minted*
+*.pyg
+*.pygtex
+*.pygstyle
+
+# morewrites
+*.mw
+
+# mylatexformat
+*.fmt
+
+# nomencl
+*.nlo
+*.nls
+
+# pdfcomment
+*.upa
+*.upb
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# standalone
+*.sta
+*.stp
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# tex4ht
+*.4tc
+*.4ct
+
+# thmtools
+*.loe
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# todonotes
+*.tdo
+
+# easy-todo
+*.lod
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices
+*.xyc
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexian
+TSWLatexianTemp*
+
+# Texpad
+.texpadtmp

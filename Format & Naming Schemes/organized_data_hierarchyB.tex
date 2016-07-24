@@ -1,0 +1,183 @@
+%\clearpage%
+\Subsection{Organized Data Hierarchy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbenvironment}'tcbBlueStyle'[title=\shadowText{organized\_data}]%, bottom=25.0mm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep organized\_data)%[title=\dirsep ion\dirsep pCT\_data\dirsep organized\_data\dirsep$\dots$]
+$\boldsymbol{-}$ directory containing all raw, preprocessed/projection, and reconstruction data, primarily as soft symbolic links to the actual data stored elsewhere according to data type, organized into a hierarchy of directories whose structure and naming indicated the data dependencies.  Only the default reconstruction data/image files are shown here, for a full list of additional files which can optionally be written to disk, see the \autohyperlink[type=Section]{Reconstruction File List} section.
+\end{tcbparagraph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\leavevmode%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+%\begin{tcolorbox}[colback=yellow, coltext=black]
+    \begin{ThinEnum}
+        \item \docentry[dir]{Phantom}
+        \begin{ThinEnum}
+            \item \docentry[constdir]{Reference\_Images}
+            \item \docentry[constdir]{Experimental}
+            \begin{ThinEnum}
+                \item \docentry[dir]{YY-MM-DD}
+                \begin{ThinEnum}
+                    \item \docentry[dir]{XXXX[\_AAA]}
+%*********************************************************************************************************************************************************************************
+                    \begin{ThinEnum}
+                        \item \docentry[constdir]{Input}
+                        \begin{ThinEnum}
+                            \item \docentry[fileset]{raw\_xxx.bin}
+                        \end{ThinEnum}%\clearpage
+                        \item \docentry[constdir]{Output}
+                        \begin{ThinEnum}
+					\item \docentry[dir]{YY-MM-DD}
+					\begin{ThinEnum}
+                            		\item \docentry[file]{readme.txt}
+                    			\item \docentry[file]{TVcorr.txt}
+						\item \docentry[file]{WcalibTemp.txt}
+                                	\item \docentry[file]{Wcalib.txt}
+                               	\item \docentry[fileset]{projection\_xxx.bin}
+%*********************************************************************************************************************************************************************************
+                                	\item \docentry[constdir]{Reconstruction}
+                                	\begin{ThinEnum}
+                                    	\item \docentry[file]{settings.cfg}
+                    				\item \docentry[dir]{YY-MM-DD}
+                                    \begin{ThinEnum}
+                                        	\item \docentry[file]{execution\_log.txt}
+                                        	\item \docentry[file]{FBP.txt}
+                                        	\item \docentry[file]{FBP.png}
+                                        	\item \docentry[file]{FBP\_med\_filtered.txt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        	\item \docentry[file]{FBP\_med\_filtered.png}
+                                        	\item \docentry[file]{hull.txt}
+                                        	\item \docentry[file]{hull.png}
+                                        	\item \docentry[file]{settings\_log.cfg}
+                                        	\item \docentry[file]{TV\_measurements.txt}
+                                        	\item \docentry[file]{x\_0.txt}
+                                        	\item \docentry[file]{x\_0.png}
+                                        \item \docentry[constdir]{Images}
+                                        \begin{ThinEnum}
+                                            \item \docentry[dir]{YY-MM-DD}
+                                                \begin{ThinEnum}
+                                                    \item \docentry[fileset]{x\_k.txt}
+                                                    \item \docentry[fileset]{x\_k.png}
+                                                \end{ThinEnum}%
+                                        \end{ThinEnum}%
+                                    \end{ThinEnum}%
+                                \end{ThinEnum}%
+                            \end{ThinEnum}%
+                        \end{ThinEnum}%
+                    \end{ThinEnum}%
+                \end{ThinEnum}%
+            \end{ThinEnum}%
+            \item \docentry[constdir]{Simulated}
+            \begin{ThinEnum}
+                	\item \docentry[dir]{G\_YY-MM-DD}
+			\begin{ThinEnum}
+				\item \docentry[dir]{XXXX[\_AAA]}
+%*********************************************************************************************************************************************************************************
+                    \begin{ThinEnum}
+                        \item \docentry[constdir]{Input}
+                        \begin{ThinEnum}
+                            \item \docentry[fileset]{raw\_xxx.bin}
+                        \end{ThinEnum}
+                        \item \docentry[constdir]{Output}
+                        \begin{ThinEnum}
+					\item \docentry[dir]{YY-MM-DD}
+                            	\begin{ThinEnum}
+						\item \docentry[file]{readme.txt}
+                    			\item \docentry[file]{TVcorr.txt}
+						\item \docentry[file]{WcalibTemp.txt}
+                                	\item \docentry[file]{Wcalib.txt}
+                                	\item \docentry[fileset]{projection\_xxx.bin}
+%*********************************************************************************************************************************************************************************
+                               \item \docentry[constdir]{Reconstruction}
+                               \begin{ThinEnum}
+                                    \item \docentry[file]{settings.cfg}
+                    				\item \docentry[dir]{YY-MM-DD}
+                                    \begin{ThinEnum}
+                                        	\item \docentry[file]{execution\_log.txt}
+                                        	\item \docentry[file]{FBP.txt}
+                                        	\item \docentry[file]{FBP.png}
+                                        	\item \docentry[file]{FBP\_med\_filtered.txt}
+                                        	\item \docentry[file]{FBP\_med\_filtered.png}
+                                        	\item \docentry[file]{hull.txt}
+                                        	\item \docentry[file]{hull.png}
+                                        	\item \docentry[file]{settings\_log.cfg}
+                                        	\item \docentry[file]{TV\_measurements.txt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                        	\item \docentry[file]{x\_0.txt}
+                                        	\item \docentry[file]{x\_0.png}
+                                        \item \docentry[constdir]{Images}
+                                        \begin{ThinEnum}
+                                            \item \docentry[dir]{YY-MM-DD}
+                                                \begin{ThinEnum}
+                                                    \item \docentry[fileset]{x\_k.txt}
+                                                    \item \docentry[fileset]{x\_k.png}
+                                                \end{ThinEnum}%
+                                        \end{ThinEnum}%
+                                    \end{ThinEnum}%
+                                \end{ThinEnum}%
+                            \end{ThinEnum}%
+                        \end{ThinEnum}%
+                    \end{ThinEnum}%
+                \end{ThinEnum}%
+                \item \docentry[dir]{T\_YY-MM-DD}
+                \begin{ThinEnum}
+				\item \docentry[dir]{XXXX[\_AAA]}
+                    \begin{ThinEnum}
+%*********************************************************************************************************************************************************************************
+                        \item \docentry[constdir]{Input}
+                        \begin{ThinEnum}
+                            \item \docentry[fileset]{raw\_xxx.bin}
+                        \end{ThinEnum}
+                        \item \docentry[constdir]{Output}
+                        \begin{ThinEnum}
+                            \item \docentry[dir]{YY-MM-DD}
+                            \begin{ThinEnum}
+                        		\item \docentry[file]{readme.txt}
+                    			\item \docentry[file]{TVcorr.txt}
+						\item \docentry[file]{WcalibTemp.txt}
+                                	\item \docentry[file]{Wcalib.txt}
+						\item \docentry[fileset]{projection\_xxx.bin}
+%*********************************************************************************************************************************************************************************
+                               \item \docentry[constdir]{Reconstruction}
+                               \begin{ThinEnum}
+                                    \item \docentry[file]{settings.cfg}
+                    				\item \docentry[dir]{YY-MM-DD}
+                                    \begin{ThinEnum}
+                                        	\item \docentry[file]{execution\_log.txt}
+                                        	\item \docentry[file]{FBP.txt}
+                                        	\item \docentry[file]{FBP.png}
+                                        	\item \docentry[file]{FBP\_med\_filtered.txt}
+                                        	\item \docentry[file]{FBP\_med\_filtered.png}
+                                        	\item \docentry[file]{hull.txt}
+                                        	\item \docentry[file]{hull.png}
+                                        	\item \docentry[file]{settings\_log.cfg}
+                                        	\item \docentry[file]{TV\_measurements.txt}
+                                        	\item \docentry[file]{x\_0.txt}
+                                        	\item \docentry[file]{x\_0.png}
+                                        	\item \docentry[constdir]{Images}
+                                        	\begin{ThinEnum}
+                                            \item \docentry[dir]{YY-MM-DD}
+                                                \begin{ThinEnum}
+                                                    \item \docentry[fileset]{x\_k.txt}
+                                                    \item \docentry[fileset]{x\_k.png}
+                                                \end{ThinEnum}%
+                                        \end{ThinEnum}%
+                                    \end{ThinEnum}%
+                                \end{ThinEnum}%
+                            \end{ThinEnum}%
+                        \end{ThinEnum}%
+                    \end{ThinEnum}%
+                \end{ThinEnum}%
+            \end{ThinEnum}%
+        \end{ThinEnum}%
+    \end{ThinEnum}%
+%\end{tcolorbox}
+\end{tcbparagraph}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\par\bigskip\bigskip\bigskip\bigskip\bigskip\smallskip
+\end{tcbenvironment}
+\endinput

@@ -1,0 +1,60 @@
+\clearpage
+\Section{Reconstruction File List}
+\begin{tcbenvironment}'tcbBlueStyle'[title=\shadowText{Reconstruction File List}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tcbparagraph}'tcbBlueStyle'(title=\dirsep ion\dirsep pCT\_data\dirsep preprocessed\_data)%[title={}]
+%$\boldsymbol{-}$ Below is a master list of files and their descriptions in alphabetical order.
+%\end{tcbparagraph}
+\begin{tcbContentsBox}
+\anttmcap14pt Below is a list of additional reconstruction data/image files optionally written to disk during reconstruction (not listed in \autohyperlink[type=Subsection]{Reconstruction Data Hierarchy} section).
+\end{tcbContentsBox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcbparagraph}'tcbBlueStyle'{tcbenumeratedStyle}
+\begin{enumerate}
+	\item \fileentry{bin\_counts.txt}{linearized bin \# for each proton history, where linearized \coloredtext*{MidnightBlue}{bin \# = t\_bin + angle\_bin * T\_BINS + v\_bin * T\_BINS * ANGULAR\_BINS}.}
+	\item \fileentry{coefficient.bin}{file containing the tabulated scattering coefficient values for $\boldsymbol{\Sigma_1}$/$\boldsymbol{\Sigma_2}$ for $\boldsymbol{u_2-u_1}$/$\boldsymbol{u_1}$ values}
+	\item \fileentry{cos\_table.bin}{file containing the tabulated values of cosine function}
+	%\item \docentry[file]{execution\_log.csv} : global execution log containing entries with scan/object information and the settings/parameters used in reconstruction for each reconstructions performed to date, with new row entries added each time the reconstruction program is executed.
+	\item \docentry[file]{FBP.txt} : text image of filtered back projection (FBP) image with the \xyplane* of each slice stacked on each other.
+	\item \docentry[file]{FBP.png} : conversion of \docentry![file]{FBP.txt} to PNG image.
+	\item \docentry[file]{FBP\_med\_filtered.txt} : text image result of applying median filter to the filtered back projection (FBP) image with the \xyplane* of each slice stacked on each other.
+    	\item \docentry[file]{FBP\_med\_filtered.png} : conversion of \docentry![file]{FBP\_avg\_filtered.txt} to PNG image.
+    	\item \docentry[file]{FBP\_avg\_filtered.txt} : text image result of applying average filter to the filtered back projection (FBP) image with the \xyplane* of each slice stacked on each other.
+    	\item \docentry[file]{FBP\_avg\_filtered.png} : conversion of \docentry![file]{FBP\_avg\_filtered.txt} to PNG image.
+	\item \fileentry{histories.bin}{binary file specifying entry/exit coordinates/angles, bin number, gantry angle, and hull entry x/y/z voxel \# for each history entering hull.}
+	\item \docentry[file]{hull\_avg\_filtered.txt} : text image result of applying average filter to the hull image with the \xyplane* of each slice stacked on each other.
+	\item \docentry[file]{hull\_avg\_filtered.png} : conversion of \docentry![file]{hull\_avg\_filtered.txt} to PNG image.
+	\item \fileentry{mean\_rel\_ut\_angle.txt}{mean relative ut angle ($\boldsymbol{\angle ut_{out} -\angle ut_{in}}$) by linearized bin \#.}
+	\item \fileentry{mean\_rel\_uv\_angle.txt}{mean relative uv angle ($\boldsymbol{\angle uv_{out} -\angle uv_{in}}$) by linearized bin \#.}
+	\item \fileentry{mean\_WEPL.txt}{mean WEPL value by linearized bin \#.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \fileentry{MLP.bin}{binary file with MLP path data for each history entering hull.}
+	\item \fileentry{MSC\_counts.txt}{text image indicating the \# of times each voxel was identified as lying outside the object using Modified Space/Silhouette Carving with the xy plane of each slice stacked on each other.}
+	\item \fileentry{MSC\_hull.txt}{text image of object hull in 1s/0s obtained using Modified Space/Silhouette Carving with the xy plane of each slice stacked on each other.}
+	\item \docentry[file]{MSC\_hull.png} : conversion of \docentry![file]{MSC\_hull.txt} to PNG image.
+	\item \fileentry{poly\_1\_2.bin}{file containing the tabulated MLP polynomial values with coefficients $\boldsymbol{\{1,2,3,4,5,6\}}$}
+	\item \fileentry{poly\_2\_3.bin}{file containing the tabulated MLP polynomial values with coefficients $\boldsymbol{\{2,3,4,5,6,7\}}$}
+	\item \fileentry{poly\_3\_4.bin}{file containing the tabulated MLP polynomial values with coefficients $\boldsymbol{\{3,4,5,6,7,8\}}$}
+	\item \fileentry{poly\_2\_6.bin}{file containing the tabulated MLP polynomial values with coefficients $\boldsymbol{\{2,6,12,20,30,42\}}$}
+	\item \fileentry{poly\_3\_12.bin}{file containing the tabulated MLP polynomial values with coefficients $\boldsymbol{\{3,12,30,60,105,168\}}$}
+	\item \fileentry{SC\_hull.txt}{text image of object hull in 1s/0s obtained using Space/Silhouette Carving with the xy plane of each slice stacked on each other.}
+	\item \docentry[file]{SC\_hull.png} : conversion of \docentry![file]{SC\_hull.txt} to PNG image.
+	\item \fileentry{sinogram.txt}{mean WEPL after statistical cuts with the $\boldsymbol{t_{bin}}$ and angular bin $\boldsymbol{\theta_{bin}}$ plane for each vertical bin $\boldsymbol{v_{bin}}$ stacked on each other.}
+	\item \fileentry{sin\_table.bin}{file containing the tabulated values of sine function}
+	\item \fileentry{SM\_counts.txt}{text image indicating the \# of times each voxel was identified as lying outside the object using Space/Silhouette Modeling with the xy plane of each slice stacked on each other.}
+	\item \fileentry{SM\_hull.txt}{text image of object hull in 1s/0s obtained using Space/Silhouette Modeling with the xy plane of each slice stacked on each other.}
+	\item \docentry[file]{SM\_hull.png} : conversion of \docentry![file]{SM\_hull.txt} to PNG image.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \fileentry{stddev\_rel\_ut\_angle.txt}{standard deviation of the relative ut angle ($\boldsymbol{\angle ut_{out} -\angle ut_{in}}$) by linearized bin \#.}
+	\item \fileentry{stddev\_rel\_uv\_angle.txt}{standard deviation of the relative uv angle ($\boldsymbol{\angle uv_{out} -\angle uv_{in}}$) by linearized bin \#.}
+	\item \fileentry{stddev\_WEPL.txt}{standard deviation of the WEPL value by linearized bin \#.}
+	\item \fileentry{WEPL.bin}{binary file specifying WEPL value for each history entering hull.}	
+\end{enumerate}
+\end{tcbparagraph}
+%\par\bigskip\bigskip\bigskip\medskip
+\end{tcbenvironment}
+\endinput 
